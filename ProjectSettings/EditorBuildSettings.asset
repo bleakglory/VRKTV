@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Sign_In_Up.unity
+    guid: 71da8e3b12e368b44a3350216e5e02e8
+  - enabled: 1
+    path: Assets/Scenes/lobby.unity
+    guid: b16112253674ef74eab90a6f857a152f
+  - enabled: 1
+    path: Assets/Scenes/KTV.unity
+    guid: 360d3fb7bed179e44bf4b1cef31afd1c
+  - enabled: 1
+    path: Assets/Scenes/chooseBG.unity
+    guid: c5189c5d7968aef4599c727cf938459f
+  m_configObjects: {}

@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 473778324
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 77364da5cc6be18be2eec9e5a2923e77
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Fantasy Forest Village/4.textures/path_normal.png
+- Assets/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_OCC.png
+- Assets/Fantasy Forest Village/4.textures/house_normal.png
+- Assets/Fantasy Forest Village/4.textures/banch_occ.png
+- Assets/Desert Assets/Freebies/PolyDesert Mobile/Materials/Textures/polydesert_atlas.png
+- Assets/Fantasy Forest Village/4.textures/grass_2_tex.png
+- Assets/UI/shortbutton.png
+- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground3.png
+- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground1.png
+- Assets/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_NRM.png
+- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground2.png
+- Assets/Fantasy Forest Village/4.textures/grass_01.png
+- Assets/UI/textbox3.png
+- Assets/Fantasy Forest Village/4.textures/fence_tex.png
+- Assets/Fantasy Forest Village/4.textures/grass_normal.png
+- Assets/Fantasy Forest Village/4.textures/path_color.png
+- Assets/Fantasy Forest Village/4.textures/fence_occ.png
+- Assets/Fantasy Forest Village/4.textures/house_addons_tex.png
+- Assets/Fantasy Forest Village/4.textures/banch_normal.png
+- Assets/Fantasy Forest Village/4.textures/house_addons_occ.png
+- Assets/Fantasy Forest Village/4.textures/house_occ.png
+- Assets/UI/longbutton2.png
+- Assets/Fantasy Forest Village/4.textures/tree_normal.png
+- Assets/Fantasy Forest Village/4.textures/house_addons_normal.png
+- Assets/UI/close3-1.png
+- Assets/Fantasy Forest Village/4.textures/banch_tex.png
+- Assets/Fantasy Forest Village/4.textures/tree_color.png
+- Assets/Fantasy Forest Village/4.textures/rocks_normal.png
+- Assets/Fantasy Forest Village/4.textures/gence_normal.png
+- Assets/Fantasy Forest Village/4.textures/rocks_occ.png
+Dependencies: []

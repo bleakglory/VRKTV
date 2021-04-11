@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1394161046
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 877d56e2f5ff9fe7536b8ca3858a51f0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Fantasy Forest Village/3.materials/house_orange_mat.mat
+- Assets/Fantasy Forest Village/3.materials/metal.mat
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0

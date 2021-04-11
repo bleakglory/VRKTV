@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2683757623
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9821f42b72163c0838cf7b6367171cc2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S.jpg
+- Assets/Fantasy Forest Village/4.textures/house_tex.jpg
+Dependencies: []

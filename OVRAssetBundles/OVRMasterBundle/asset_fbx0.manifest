@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 1493563975
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a474f61a2e70707e04c66a168470a272
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 17649485ebeac7f8c971c8428f9a5cd8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Snow_mountain/snow_mountain/Snow_mountain.FBX
+- Assets/Fantasy Forest Village/5.models/tree_low_poly.fbx
+- Assets/Fantasy Forest Village/5.models/house and props.fbx
+- Assets/Fantasy Forest Village/5.models/rocks.fbx
+- Assets/Fantasy Forest Village/5.models/path.fbx
+- Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_r.fbx
+- Assets/Fantasy Forest Village/5.models/small_plant.fbx
+- Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_l.fbx
+- Assets/Fantasy Forest Village/5.models/tree.fbx
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0

@@ -1,0 +1,91 @@
+ManifestFileVersion: 0
+CRC: 4011645542
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c05c01d6fd5ad59747bfdf44a4dffd53
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2b403f0b6770e0ba85c6af0a3e7d9184
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1a19ba80ca7f6cc4ea8dfb650eb2630b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d02441d1c09bd634491e57a381a2b58b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d665c028c9de5a42a9ee3ce2ec1e3dc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 154
+  Script: {instanceID: 0}
+- Class: 156
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+- Class: 215
+  Script: {instanceID: 0}
+- Class: 218
+  Script: {instanceID: 0}
+- Class: 1953259897
+  Script: {instanceID: 0}
+Assets:
+- Assets/Scenes/KTV.unity
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_obj0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_prefab1

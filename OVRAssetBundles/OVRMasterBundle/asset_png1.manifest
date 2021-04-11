@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3990468179
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a73330785d89bb882ec1ce0115e62715
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Snow.png
+- Assets/Forest.png
+- Assets/Desert.png
+- Assets/Fantasy Forest Village/4.textures/rocks_tex.png
+- Assets/Fantasy Forest Village/4.textures/grass_tex.png
+Dependencies: []

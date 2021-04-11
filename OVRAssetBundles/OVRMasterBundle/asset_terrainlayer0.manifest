@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 3275077635
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 98f80f61e0442c588890a6d96e48862b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f106dac3fdc2900390d84e482ab7f8f1
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 1953259897
+  Script: {instanceID: 0}
+Assets:
+- Assets/_TerrainAutoUpgrade/layer_Ground3(1.000,1.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+- Assets/_TerrainAutoUpgrade/layer_grass_texgrass_normal(2.000,2.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.120.terrainlayer
+- Assets/_TerrainAutoUpgrade/layer_Ground1(1.000,1.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+- Assets/_TerrainAutoUpgrade/layer_Ground2(1.000,1.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000.terrainlayer
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png1

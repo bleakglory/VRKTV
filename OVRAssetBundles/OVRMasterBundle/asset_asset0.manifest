@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 189691835
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cf933efcf4b69d10ce811c56c852155d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a639fb2737b4624e023c11dfe03d9ed7
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 156
+  Script: {instanceID: 0}
+- Class: 1953259897
+  Script: {instanceID: 0}
+Assets:
+- Assets/Desert Assets/Freebies/Polygon Desert Pack/New Terrain.asset
+- Assets/Fantasy Forest Village/1.demo/sample_terrain.asset
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0

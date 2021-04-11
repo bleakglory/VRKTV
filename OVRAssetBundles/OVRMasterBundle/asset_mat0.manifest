@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 1416970798
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bbd5f06de9eaf25d06e99a5826ef76d5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Easy Primitive People/Materials/Pink.mat
+- Assets/Snow_mountain/snow_mountain/Materials/Snow_mountain_t1_2.mat
+- Assets/Easy Primitive People/Materials/Black.mat
+- Assets/Fantasy Forest Village/3.materials/light.mat
+- Assets/Fantasy Forest Village/3.materials/house_wood_addons_mat.mat
+- Assets/Easy Primitive People/Materials/Baby Blue.mat
+- Assets/Easy Primitive People/Materials/Dark Pink.mat
+- Assets/Fantasy Forest Village/3.materials/tree_Color.mat
+- Assets/Fantasy Forest Village/3.materials/rocks_Color.mat
+- Assets/Fantasy Forest Village/3.materials/house_blue_mat.mat
+- Assets/Easy Primitive People/Materials/Silver.mat
+- Assets/Fantasy Forest Village/3.materials/path_mat.mat
+- Assets/Easy Primitive People/Materials/Police Blue.mat
+- Assets/Fantasy Forest Village/3.materials/house_purple_mat.mat
+- Assets/Easy Primitive People/Materials/Gold.mat
+- Assets/Easy Primitive People/Materials/Red.mat
+- Assets/Fantasy Forest Village/3.materials/house_green_mat.mat
+- Assets/Fantasy Forest Village/3.materials/dodatki_Color.mat
+- Assets/Fantasy Forest Village/3.materials/lawka_Color.mat
+- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/Materials/defaultMat.mat
+- Assets/Easy Primitive People/Materials/Denim.mat
+- Assets/Easy Primitive People/Materials/Dark Grey.mat
+- Assets/Easy Primitive People/Materials/Light Brown.mat
+- Assets/Easy Primitive People/Materials/Light Pink.mat
+- Assets/Easy Primitive People/Materials/Green.mat
+- Assets/Easy Primitive People/Materials/Dark Brown.mat
+- Assets/Easy Primitive People/Materials/White.mat
+- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/Materials/polydesert_atlas.mat
+- Assets/Fantasy Forest Village/3.materials/ogrodzenie_Color.mat
+- Assets/Easy Primitive People/Materials/Grey.mat
+Dependencies:
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_bmp0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png1

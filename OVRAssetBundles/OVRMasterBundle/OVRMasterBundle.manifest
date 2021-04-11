@@ -1,0 +1,102 @@
+ManifestFileVersion: 0
+CRC: 556979869
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: asset_resources
+      Dependencies:
+        Dependency_0: asset_ttf0
+    Info_1:
+      Name: scene_sign_in_up
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_png0
+        Dependency_2: asset_prefab0
+        Dependency_3: asset_fbx0
+    Info_2:
+      Name: scene_lobby
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_png0
+        Dependency_2: asset_prefab0
+        Dependency_3: asset_fbx0
+    Info_3:
+      Name: scene_ktv
+      Dependencies:
+        Dependency_0: asset_prefab0
+        Dependency_1: asset_prefab1
+        Dependency_2: asset_fbx0
+        Dependency_3: asset_mat0
+        Dependency_4: asset_mat1
+        Dependency_5: asset_obj0
+        Dependency_6: asset_asset0
+    Info_4:
+      Name: scene_choosebg
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_png0
+        Dependency_2: asset_png1
+        Dependency_3: asset_prefab0
+        Dependency_4: asset_fbx0
+    Info_5:
+      Name: asset_png0
+      Dependencies: {}
+    Info_6:
+      Name: asset_png1
+      Dependencies: {}
+    Info_7:
+      Name: asset_prefab0
+      Dependencies:
+        Dependency_0: asset_fbx0
+        Dependency_1: asset_mat0
+        Dependency_2: asset_mat1
+        Dependency_3: asset_obj0
+    Info_8:
+      Name: asset_prefab1
+      Dependencies:
+        Dependency_0: asset_fbx0
+        Dependency_1: asset_mat0
+        Dependency_2: asset_mat1
+    Info_9:
+      Name: asset_ttf0
+      Dependencies: {}
+    Info_10:
+      Name: asset_fbx0
+      Dependencies:
+        Dependency_0: asset_mat0
+        Dependency_1: asset_jpg0
+    Info_11:
+      Name: asset_psd0
+      Dependencies: {}
+    Info_12:
+      Name: asset_mat0
+      Dependencies:
+        Dependency_0: asset_png0
+        Dependency_1: asset_png1
+        Dependency_2: asset_bmp0
+        Dependency_3: asset_jpg0
+    Info_13:
+      Name: asset_mat1
+      Dependencies:
+        Dependency_0: asset_png0
+        Dependency_1: asset_jpg0
+    Info_14:
+      Name: asset_obj0
+      Dependencies:
+        Dependency_0: asset_mat0
+    Info_15:
+      Name: asset_bmp0
+      Dependencies: {}
+    Info_16:
+      Name: asset_asset0
+      Dependencies:
+        Dependency_0: asset_png0
+        Dependency_1: asset_terrainlayer0
+    Info_17:
+      Name: asset_terrainlayer0
+      Dependencies:
+        Dependency_0: asset_png0
+        Dependency_1: asset_png1
+    Info_18:
+      Name: asset_jpg0
+      Dependencies: {}
