@@ -93,17 +93,18 @@ public class signControl : MonoBehaviour
             }
             else
             {
-                if (GetComponent<UserController>().Login(username, password) == 1)
+                int status = GetComponent<UserController>().Login(username, password);
+                if (status == 1)
                 {
                     systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "user dont exist";
                     Debug.Log("用户不存在");
                 }
-                else if (GetComponent<UserController>().Login(username, password) == 2)
+                else if (status == 2)
                 {
                     systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "wrong pwd";
                     Debug.Log("密码错误");
                 }
-                else if (GetComponent<UserController>().Login(username, password) == 0)
+                else if (status == 0)
                 {
                     systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ log in";
                     Debug.Log("成功登录");
@@ -128,9 +129,17 @@ public class signControl : MonoBehaviour
                 }
                 else
                 {
-                    GetComponent<UserController>().Register(username, password);
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ register";
-                    SceneManager.LoadScene(0);
+                    int status = GetComponent<UserController>().Register(username, password);
+                    if (status == 1)
+                    {
+                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username exists";
+                        Debug.Log("用户已存在");
+                    }
+                    else if (status == 0)
+                    {
+                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ register";
+                        SceneManager.LoadScene(0);
+                    }
                 }
 
             }
