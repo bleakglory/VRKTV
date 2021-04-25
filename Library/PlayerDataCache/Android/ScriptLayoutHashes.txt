@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Viper's/YKY/AR/testRayser/VRKTV202.apk
+D:/testktv.apk
 SceneListBegin?
 Assets/Scenes/Sign_In_Up.unity
 Assets/Scenes/lobby.unity
@@ -8,6 +8,7 @@ Assets/Scenes/KTV.unity
 Assets/Scenes/chooseBG.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ONSPVersion
+249f54873990b48ceb746c325a792419 Assembly-CSharp.dll:.CameraRecorder
 bf5cb87c773ea378a3f5ac036aab367b Assembly-CSharp.dll:.SocialPlatformManager
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 329a4358a2c40fe3c40f44951200bd91 Assembly-CSharp.dll:.OvrAvatarBody
@@ -15,7 +16,6 @@ f67a6acf3a9c5fc5def73fdd1c4df0de Oculus.VR.dll:.OVRMixedRealityCaptureSettings
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ButtonDownListener
 0c2ecdae097ba779e0a9e100ed96bb10 Oculus.VR.dll:.OVRCameraRig
-ed7e4906f4d6842ad46a27bf6f67c03d Assembly-CSharp.dll:.GameManager
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -327,6 +327,7 @@ b00ce1f32326f1cd1160488ffd14965a Oculus.VR.Editor.dll:.OVRConfig
 8b9f42d72019bde2f9fe0667762eaff3 Assembly-CSharp.dll:.OvrAvatarSkinnedMeshRenderComponent
 57bbc7ecf7a22767c1b9015689b1da78 Assembly-CSharp.dll:OculusSampleFramework.CowController
 8b751ea9ac08c048355865b722865681 Assembly-CSharp.dll:OculusSampleFramework.PanelHMDFollower
+02523ecb27387a12b33355e59ee09f4d Assembly-CSharp.dll:.GameManager
 76b80dd1b65f63dfa63cf0ea8a906f3a Assembly-CSharp.dll:.SimpleCapsuleWithStickMovement
 20acf3c1667c3fcaf430a03c1274c6e5 Oculus.Platform.dll:Oculus.Platform.Samples.VrBoardGame.MatchmakingManager
 0cc2f729ed4885ca9c95ead34ce0e907 Oculus.VR.Editor.dll:Assets.Oculus.VR.Editor.OVRPlatformToolSettings
@@ -352,7 +353,7 @@ c1313d723d19b50c00b55c8ce726b990 Assembly-CSharp.dll:.TeleportTargetHandlerNavMe
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 163c66cebee3ffd65522e6a24263575f Assembly-CSharp.dll:OculusSampleFramework.BoneCapsuleTriggerLogic
 fbb319f69f4aa2697b2d24521cf3e61d Assembly-CSharp.dll:OculusSampleFramework.WindmillController
-4f94a572124d692b8cf4b5529c1e6920 Assembly-CSharp.dll:.signControl
+cfcdb16fb946765f181949c61a2fa8b6 Assembly-CSharp.dll:.signControl
 c3bd598ebf26a1734f4e48c8dfe999af Assembly-CSharp.dll:.TeleportDestination
 2fe925fedc6684bfaaedfdd7284d7727 Oculus.VR.dll:.OVRSkeleton
 cd06391f9225499fb9ea605ab668b015 Oculus.Platform.dll:Oculus.Platform.Samples.VrHoops.VREyeRaycaster

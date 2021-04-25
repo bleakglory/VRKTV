@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0D6B3920-8BCF-05FF-EEFE-23C97D84BB82}</ProjectGuid>
+    <ProjectGuid>{FFDD7E8B-FE2D-B2DE-DC9E-6E00AFF9DD88}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Oculus.Platform</AssemblyName>
@@ -47,14 +47,10 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.4.32f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2018.4.32f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -480,37 +476,37 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="antlr.runtimePlastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/antlr.runtimePlastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/antlr.runtimePlastic.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.RuntimePlastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/Antlr3.RuntimePlastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/Antlr3.RuntimePlastic.dll</HintPath>
     </Reference>
     <Reference Include="LibGit2SharpPlastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/LibGit2SharpPlastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/LibGit2SharpPlastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/log4netPlastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Net20Plastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/Newtonsoft.Json.Net20Plastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/Newtonsoft.Json.Net20Plastic.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>D:/Viper's/YKY/AR/testRayser/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/unityplastic.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.plasticscm-cn@1.1.8-preview/Lib/Editor/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

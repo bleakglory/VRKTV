@@ -27,7 +27,8 @@ public class signControl : MonoBehaviour
     string password;
     string confirmPassword;
 
-    public GameObject systemInformation;
+    public GameObject sysNotificationPanel;
+    public GameObject sysNotification;
     
 
 
@@ -43,6 +44,7 @@ public class signControl : MonoBehaviour
         passwordConfirm_signUp.SetActive(false);
         confirm_but.SetActive(false);
         cancel_but.SetActive(false);
+        sysNotificationPanel.SetActive(false);
 
         isSignIn = false;
     }
@@ -85,28 +87,33 @@ public class signControl : MonoBehaviour
 
     public void clickConfirm()
     {
+        sysNotificationPanel.SetActive(false);
         if (isSignIn)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
+                sysNotificationPanel.SetActive(true);
+                sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
             }
             else
             {
                 int status = GetComponent<UserController>().Login(username, password);
                 if (status == 1)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "user dont exist";
+                    sysNotificationPanel.SetActive(true);
+                    sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "user dont exist";
                     Debug.Log("用户不存在");
                 }
                 else if (status == 2)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "wrong pwd";
+                    sysNotificationPanel.SetActive(true);
+                    sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "wrong pwd";
                     Debug.Log("密码错误");
                 }
                 else if (status == 0)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ log in";
+                    sysNotificationPanel.SetActive(true);
+                    sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "succ log in";
                     Debug.Log("成功登录");
                     SceneManager.LoadScene(1);
 
@@ -118,13 +125,15 @@ public class signControl : MonoBehaviour
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
+                sysNotificationPanel.SetActive(true);
+                sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
             }
             else
             {
                 if (!password.Equals(confirmPassword))
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "two pwd are not same"+" "+password+"   cp:"+confirmPassword;
+                    sysNotificationPanel.SetActive(true);
+                    sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "two passwords are not same";
 
                 }
                 else
@@ -132,12 +141,14 @@ public class signControl : MonoBehaviour
                     int status = GetComponent<UserController>().Register(username, password);
                     if (status == 1)
                     {
-                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username exists";
+                        sysNotificationPanel.SetActive(true);
+                        sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "username exists";
                         Debug.Log("用户已存在");
                     }
                     else if (status == 0)
                     {
-                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ register";
+                        sysNotificationPanel.SetActive(true);
+                        sysNotification.GetComponent<TMPro.TextMeshProUGUI>().text = "successfully register";
                         SceneManager.LoadScene(0);
                     }
                 }
@@ -150,6 +161,7 @@ public class signControl : MonoBehaviour
     public void clickCancel()
     {
         SceneManager.LoadScene(0);
+        
     }
 
     public void saveUsername(string text)
