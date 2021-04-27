@@ -565,7 +565,7 @@ MonoBehaviour:
   signUp_but: {fileID: 1512436615}
   confirm_but: {fileID: 492737333}
   cancel_but: {fileID: 322832666}
-  systemInformation: {fileID: 956712850}
+  systemInformation: {fileID: 956712852}
 --- !u!114 &244723117
 MonoBehaviour:
   m_ObjectHideFlags: 0

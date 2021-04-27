@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     private int Frequency = 16000; //录音频率
     private int BitRate = 16; //比特率
     private int MicSecond = 3;  //每隔3秒，保存一下录音数据
-    //public AudioSource au;
+    public bool isStart;
+
     private bool isPlay;
-    private bool isStart;
+
     private string path = "";
     [SerializeField]
     private AudioSource au;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class signControl : MonoBehaviour
@@ -27,7 +28,7 @@ public class signControl : MonoBehaviour
     string password;
     string confirmPassword;
 
-    public GameObject systemInformation;
+    public TMP_Text systemInformation;
     
 
 
@@ -117,19 +118,19 @@ public class signControl : MonoBehaviour
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
+                systemInformation.text = "username or password is empty";
             }
             else
             {
                 if (!password.Equals(confirmPassword))
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "two pwd are not same"+" "+password+"   cp:"+confirmPassword;
+                    systemInformation.text = "two pwd are not same"+" "+password+"   cp:"+confirmPassword;
 
                 }
                 else
                 {
                     GetComponent<UserController>().Register(username, password);
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ register";
+                    systemInformation.text = "succ register";
                     SceneManager.LoadScene(0);
                 }
 
