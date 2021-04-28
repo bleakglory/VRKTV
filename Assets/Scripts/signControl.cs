@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class signControl : MonoBehaviour
 {
@@ -51,8 +52,17 @@ public class signControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
+        /*
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Debug.Log("MergeFile:~");
+            String[] filelist=new String[] { "Assets/Music/houlai.wav", "Assets/Music/shinian.wav" };
+            String outputfilename = "Assets/Music/mergeaudiofile.wav";
+            String tempdir = "Assets/Music/temp";
+            WAVFile.MergeAudioFiles(filelist, outputfilename, tempdir);
+        }
+        */
     }
 
     public void clickSignIn()

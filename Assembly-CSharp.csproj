@@ -60,6 +60,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegCommands.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegConfigs.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegHandler.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegParser.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegProgressParser.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegUtils\UnityThread.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegWrapper.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemo.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\Console.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\DefaultFieldInitializer.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\IOSDemoHelpers\IOSInputView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\IOSDemoHelpers\IOSOutputView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\IOSDemoHelpers\IOSVideoPicker.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\AddSoundView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\AppendView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\CompressView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\ConvertView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\DecodeView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\EncodeView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\ProgressView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\TrimView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\WatermarkView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegREC.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecMicAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecSystemAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecDemoBall.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECView\RECView.cs" />
+    <Compile Include="Assets\FFmpeg\Standalone\StandaloneProxy.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -266,6 +295,7 @@
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\FFmpeg\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\Locomotion\Materials\ColumnGlow.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />

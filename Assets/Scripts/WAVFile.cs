@@ -1227,7 +1227,7 @@ public class WAVFile
         // 5、 现在生成音频混音的文件输出
         outputFile.Create(pOutputFilename, outputStereo, firstFileAudioFormat.SampleRateHz,
         highestBitsPerSample);
-
+        
         // 6. 合并
         if (highestBitsPerSample == 8)
         {
@@ -1260,7 +1260,7 @@ public class WAVFile
             }
         }
         outputFile.Close();
-
+        
         // 7. 删除输入文件，释放磁盘空间
         foreach (WAVFile audioFile in scaledAudioFiles)
         {
@@ -1268,7 +1268,7 @@ public class WAVFile
             audioFile.Close();
             File.Delete(filename);
         }
-
+        
         // 8. 调整输出文件的音量
         if (highestBitsPerSample == 8)
         {
@@ -1285,7 +1285,7 @@ public class WAVFile
             multiplier = -multiplier;
 
         AdjustVolumeInPlace(pOutputFilename, multiplier);
-
+        
         // 如果临时目录存在，删除它
         if (!tempDirExisted)
         {
@@ -1294,6 +1294,7 @@ public class WAVFile
                 throw new WAVFileAudioMergeException("Unable to remove temp directory (" + pTempDir + "): " + retval,
                 "WAVFile.MergeAudioFiles()");
         }
+        
     }
 
     /// <summary>
