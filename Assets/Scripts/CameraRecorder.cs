@@ -36,7 +36,7 @@ public class CameraRecorder : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonUp("Record") && videoSource)
+        if (Input.GetKeyDown(KeyCode.Space) && videoSource)
         {
             recording = !recording;
             if (recording)
@@ -47,6 +47,7 @@ public class CameraRecorder : MonoBehaviour
             else
             {
                 Debug.Log("Stoping the recording");
+                Debug.Log("videopath:"+Application.dataPath + "/CameraRecorder/RecordedVideo.avi");
                 float duration = Time.time - startingTime;
 
                 //Create a C friendly Array for the frames and then Call the C Function to Pack the video

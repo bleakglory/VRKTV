@@ -53,7 +53,7 @@ public class signControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        /*
+        
         if (Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("MergeFile:~");
@@ -62,7 +62,7 @@ public class signControl : MonoBehaviour
             String tempdir = "Assets/Music/temp";
             WAVFile.MergeAudioFiles(filelist, outputfilename, tempdir);
         }
-        */
+        
     }
 
     public void clickSignIn()
