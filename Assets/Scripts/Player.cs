@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     public int resPoint;
     public LineRenderer lineRender;
 
-    public GameObject LayerPoint;
-    public GameObject UIHelper;
+    public LineRenderer line;
+    public GameObject input;
     public GameManager GM;
 
     private Transform forward;
@@ -35,17 +35,16 @@ public class Player : MonoBehaviour
         if (!(Menucanvas.activeInHierarchy || Returncanvas.activeInHierarchy))
         {
             playerMove();
-            LayerPoint.GetComponent<LineRenderer>().enabled = false;
-            LayerPoint.GetComponent<LaserPointer>().enabled = false;
-            UIHelper.GetComponent<HandedInputSelector>().enabled = false;
+            line.enabled = false;
+            input.SetActive(false);
         }
 
        else 
         {
-            if (!LayerPoint.activeInHierarchy)
-                LayerPoint.SetActive(true);
-            if (!EventSystem.activeInHierarchy)
-                EventSystem.SetActive(true);
+            if (!line.enabled)
+                line.enabled = true;
+            if (!input.activeInHierarchy)
+                input.SetActive(true);
         }
     }
 

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1264051354
+CRC: 4291786829
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9e1e99871b200c3b8e07042bb9c70f16
+    Hash: 8d1b4fa7f88ad852102f1babbf0533eb
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 9eee0fb5b04deafa1bee9d647a144777
+    Hash: e8ff18a0754e835c507d84fa3d4c17a2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -104,7 +104,8 @@ ClassTypes:
 Assets:
 - Assets/Scenes/lobby.unity
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_fbx0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_resources
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_prefab1
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_resources

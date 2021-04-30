@@ -29,7 +29,18 @@ public class signControl : MonoBehaviour
     string confirmPassword;
 
     public TMP_Text systemInformation;
-    
+    public GameObject systemNotificationPanel;
+
+
+    bool isLogged = false;
+    public Transform cameraTransform;
+    public GameObject[] points;
+    public float moveSpeed = 1;
+    public float rotateSpeed;
+    int i = 0;
+    float distance;
+    float time = 0;
+
 
 
     // Start is called before the first frame update
@@ -44,6 +55,7 @@ public class signControl : MonoBehaviour
         passwordConfirm_signUp.SetActive(false);
         confirm_but.SetActive(false);
         cancel_but.SetActive(false);
+        systemNotificationPanel.SetActive(false);
 
         isSignIn = false;
     }
@@ -51,7 +63,30 @@ public class signControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isLogged)
+        {
+            systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
+            systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "You have Successfully logged in our system! You will move into the Characters Selection Session in " + (int)(3 - time) + "s";
+            time += Time.deltaTime;
+            if (time >= 3)
+            {
+                systemNotificationPanel.SetActive(false);
+                cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, Quaternion.LookRotation(points[i].transform.position - cameraTransform.position), rotateSpeed * Time.deltaTime);
+                distance = Vector3.Distance(cameraTransform.position, points[i].transform.position);
+                cameraTransform.position = Vector3.MoveTowards(cameraTransform.position, points[i].transform.position, Time.deltaTime * moveSpeed);
+                if (distance < 0.1f && i < points.Length - 1)
+                {
+                    i++;
+
+
+                }
+                else if (distance < 0.1f && i == points.Length - 1)
+                {
+                    SceneManager.LoadScene(1);
+                }
+            }
+            
+        }
     }
 
     public void clickSignIn()
@@ -90,25 +125,34 @@ public class signControl : MonoBehaviour
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "username or password is empty";
+                systemNotificationPanel.SetActive(true);
+                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "Username or Password is empty! Please enter your username and password...";
             }
             else
             {
                 if (GetComponent<UserController>().Login(username, password) == 1)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "user dont exist";
+                    systemNotificationPanel.SetActive(true);
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "This user does not exist! Please enter an available username...";
                     Debug.Log("用户不存在");
                 }
                 else if (GetComponent<UserController>().Login(username, password) == 2)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "wrong pwd";
+                    systemNotificationPanel.SetActive(true);
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "The password is wrong! Please enter your password again...";
                     Debug.Log("密码错误");
                 }
                 else if (GetComponent<UserController>().Login(username, password) == 0)
                 {
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "succ log in";
+                    systemNotificationPanel.SetActive(true);
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "You have Successfully logged in our system! You will move into the Characters Selection Session in "+(int)(3-time)+"s";
                     Debug.Log("成功登录");
-                    SceneManager.LoadScene(1);
+                    //SceneManager.LoadScene(1);
+                    isLogged = true;
 
                 }
             }
@@ -118,19 +162,25 @@ public class signControl : MonoBehaviour
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                systemInformation.text = "username or password is empty";
+                systemNotificationPanel.SetActive(true);
+                systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                systemInformation.text = "Username or Password is empty! Please enter your username and password...";
             }
             else
             {
                 if (!password.Equals(confirmPassword))
                 {
-                    systemInformation.text = "two pwd are not same"+" "+password+"   cp:"+confirmPassword;
+                    systemNotificationPanel.SetActive(true);
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                    systemInformation.text = "Two passwords are not same! Please check your password...";
 
                 }
                 else
                 {
+                    systemNotificationPanel.SetActive(true);
                     GetComponent<UserController>().Register(username, password);
-                    systemInformation.text = "succ register";
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
+                    systemInformation.text = "You have successfully register an account, you can use the account to log in our system...";
                     SceneManager.LoadScene(0);
                 }
 
@@ -141,6 +191,7 @@ public class signControl : MonoBehaviour
 
     public void clickCancel()
     {
+        systemNotificationPanel.SetActive(false);
         SceneManager.LoadScene(0);
     }
 

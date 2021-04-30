@@ -2875,6 +2875,11 @@ MonoBehaviour:
   confirm_but: {fileID: 0}
   cancel_but: {fileID: 0}
   systemInformation: {fileID: 0}
+  systemNotificationPanel: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  points: []
+  moveSpeed: 1
+  rotateSpeed: 0
 --- !u!114 &1262497343
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1493563975
+CRC: 140588427
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a474f61a2e70707e04c66a168470a272
+    Hash: 2496e3007c3506a14731b93c0c7aa55d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 17649485ebeac7f8c971c8428f9a5cd8
@@ -32,15 +32,32 @@ ClassTypes:
 - Class: 137
   Script: {instanceID: 0}
 Assets:
-- Assets/Snow_mountain/snow_mountain/Snow_mountain.FBX
-- Assets/Fantasy Forest Village/5.models/tree_low_poly.fbx
-- Assets/Fantasy Forest Village/5.models/house and props.fbx
-- Assets/Fantasy Forest Village/5.models/rocks.fbx
-- Assets/Fantasy Forest Village/5.models/path.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Simple_01.FBX
+- Assets/Art Source/Snow_mountain/snow_mountain/Snow_mountain.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Light_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_Small_01.FBX
+- Assets/Art Source/Fantasy Forest Village/5.models/tree_low_poly.fbx
+- Assets/Art Source/Fantasy Forest Village/5.models/house and props.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_Arc_90_02.FBX
+- Assets/Art Source/Fantasy Forest Village/5.models/rocks.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Floor_01.FBX
+- Assets/Art Source/Fantasy Forest Village/5.models/path.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Left_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Fan_01.FBX
 - Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_r.fbx
-- Assets/Fantasy Forest Village/5.models/small_plant.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Large_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_01.FBX
+- Assets/Art Source/Fantasy Forest Village/5.models/small_plant.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Door_Arch_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_03.FBX
 - Assets/Oculus/SampleFramework/Core/TouchControllers/NewTouchControllers/controller_l.fbx
-- Assets/Fantasy Forest Village/5.models/tree.fbx
+- Assets/Art Source/Fantasy Forest Village/5.models/tree.fbx
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Door_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Wall_HalfArc_90_02.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Column_01_Top.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_01.FBX
+- Assets/_Barking_Dog/3D Free Modular Kit/_Meshes/Roof_Angle_Smal_01.FBX
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_jpg0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_mat0

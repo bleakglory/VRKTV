@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         WavFromClip(path + "/test.wav", au.clip); //将录音保存为wav
     }
 
-    public void record()
+    public void playRecord()
     {
         musicList[PlayerPrefs.GetInt("Music")].Play();
         OnPlayClick();
@@ -85,76 +85,64 @@ public class GameManager : MonoBehaviour
         menuCanv.gameObject.SetActive(true);
     }
 
+
     public void one()
     {
-        PlayerPrefs.SetInt("Music", 1);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(1);
     }
 
     public void two()
     {
-        PlayerPrefs.SetInt("Music", 2);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(2);
     }
 
     public void three()
     {
-        PlayerPrefs.SetInt("Music", 3);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(3);
     }
 
     public void four()
     {
-        PlayerPrefs.SetInt("Music", 4);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(4);
     }
 
     public void five()
     {
-        PlayerPrefs.SetInt("Music", 5);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(5);
     }
 
     public void six()
     {
-        PlayerPrefs.SetInt("Music", 6);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(6);
     }
 
     public void seven()
     {
-        PlayerPrefs.SetInt("Music", 7);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(7);
     }
 
     public void eight()
     {
-        PlayerPrefs.SetInt("Music", 8);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(8);
     }
 
     public void nine()
     {
-        PlayerPrefs.SetInt("Music", 9);
-        menuCanv.gameObject.SetActive(false);
-        isStart = true;
+        startMusic(9);
     }
 
     public void ten()
     {
-        PlayerPrefs.SetInt("Music", 10);
+        startMusic(10);
+    }
+    #endregion
+
+    void startMusic(int num)
+    {
+        PlayerPrefs.SetInt("Music", num);
         menuCanv.gameObject.SetActive(false);
         isStart = true;
     }
-    #endregion
 
     #region microphone
     //开始录音

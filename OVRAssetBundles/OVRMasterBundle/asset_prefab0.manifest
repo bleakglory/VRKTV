@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3315905767
+CRC: 2027719721
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3ad0aaa24c858d3a03177de3c7b62bbb
+    Hash: bf18aa91a0ae8278421443cc2d713754
   TypeTreeHash:
     serializedVersion: 2
-    Hash: fb99176c8518f4c2b8bd5dc94933f46f
+    Hash: 13b79dcfd10eb261bd5058da2c68b428
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -31,9 +31,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
-- Class: 90
+- Class: 82
   Script: {instanceID: 0}
 - Class: 95
+  Script: {instanceID: 0}
+- Class: 108
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
@@ -49,6 +51,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: b558aa8ebb866bd4da56c536a7b4eb71, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5009e9d1b4124d742b8cdf74e3c3f8a6, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -57,41 +61,37 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
-- Class: 205
-  Script: {instanceID: 0}
 Assets:
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock05_m.prefab
-- Assets/Easy Primitive People/Prefab/Doctor.prefab
-- Assets/Easy Primitive People/Prefab/Santa.prefab
-- Assets/Easy Primitive People/Prefab/Patient.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock01_m.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus03_m.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/aloe_m.prefab
-- Assets/Easy Primitive People/Prefab/Robber.prefab
-- Assets/Easy Primitive People/Prefab/Knight.prefab
-- Assets/Easy Primitive People/Prefab/Clown.prefab
-- Assets/Fantasy Forest Village/2.prefabs/house.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_01.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Doctor.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Smal_01.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Santa.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Arch_01.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Patient.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Simple_01.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Robber.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Knight.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Column_01_Top.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Clown.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Door_Left_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_01.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/UIHelpers.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus02_m.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock07_m.prefab
-- Assets/Easy Primitive People/Prefab/Zombie.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock02_m.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus01_m.prefab
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock08_m.prefab
-- Assets/Snow_mountain/snow_mountain/Prefabs/Snow_mountain.prefab
-- Assets/Easy Primitive People/Prefab/Pilgrim.prefab
-- Assets/Fantasy Forest Village/2.prefabs/path.prefab
-- Assets/Fantasy Forest Village/2.prefabs/tree.prefab
-- Assets/Fantasy Forest Village/2.prefabs/rocks.prefab
-- Assets/Easy Primitive People/Prefab/Devil.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_Arc_90_02.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Light_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_01.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Zombie.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_02.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Fan_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_03.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Pilgrim.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_02.prefab
 - Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab
-- Assets/Easy Primitive People/Prefab/Angel.prefab
-- Assets/Easy Primitive People/Prefab/Villager.prefab
-- Assets/Easy Primitive People/Prefab/Cop.prefab
-- Assets/Easy Primitive People/Prefab/Nurse.prefab
-- Assets/Easy Primitive People/Prefab/Pig.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Floor_Small_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Door_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Wall_HalfArc_90_03.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Roof_Angle_Large_01.prefab
+- Assets/_Barking_Dog/3D Free Modular Kit/_Prefabs/Room_Big_Part_01.prefab
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_fbx0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat1
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_obj0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_mat0

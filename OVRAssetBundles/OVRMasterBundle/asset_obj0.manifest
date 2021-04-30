@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 423827279
+CRC: 3425562944
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6bdce2d628d1cf70a6dbfcd9cc4079b3
+    Hash: 3d22e4c547df57bbe2eea13e952c19fa
   TypeTreeHash:
     serializedVersion: 2
     Hash: ce00b96eb05100871f39954dc67941ec
@@ -22,14 +22,14 @@ ClassTypes:
 - Class: 43
   Script: {instanceID: 0}
 Assets:
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock01.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/aloe.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock02.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock05.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus02.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus01.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock07.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock08.obj
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus03.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock01.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/aloe.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock02.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock05.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus02.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus01.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock07.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/rock08.obj
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/cactus03.obj
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_mat1

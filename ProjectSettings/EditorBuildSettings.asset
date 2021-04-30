@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sign_In_Up.unity
-    guid: 71da8e3b12e368b44a3350216e5e02e8
+    path: Assets/Test_sign.unity
+    guid: e41ea5feb8bc6fd44a8c3c5fcf20b284
   - enabled: 1
-    path: Assets/Scenes/lobby.unity
-    guid: b16112253674ef74eab90a6f857a152f
+    path: Assets/Test_lobby.unity
+    guid: dea63744d6cf3724fb410655da6b3efd
+  - enabled: 1
+    path: Assets/Test_chooseBG.unity
+    guid: f9ef9a71b53ad544094047f390ff4f69
   - enabled: 1
     path: Assets/Scenes/KTV.unity
     guid: 360d3fb7bed179e44bf4b1cef31afd1c
-  - enabled: 1
-    path: Assets/Scenes/chooseBG.unity
-    guid: c5189c5d7968aef4599c727cf938459f
   m_configObjects: {}

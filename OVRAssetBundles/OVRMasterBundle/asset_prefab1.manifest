@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4080597447
+CRC: 3975310752
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3afee6baeaf3cf94b5e2215608dd366d
+    Hash: 182ea8202ec44bd4d6131bceac5f861e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 276f89696d528bdb04696de13072fa1b
+    Hash: c87e14bea7c319a1b00c0f3a6699de3c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,13 +21,48 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
 - Class: 205
   Script: {instanceID: 0}
 Assets:
-- Assets/Fantasy Forest Village/2.prefabs/bench.prefab
-- Assets/Fantasy Forest Village/2.prefabs/street_lamp.prefab
-- Assets/Fantasy Forest Village/2.prefabs/small_tree.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock05_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock01_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus03_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/aloe_m.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/house.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus02_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock07_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock02_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/cactus01_m.prefab
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Prefabs/rock08_m.prefab
+- Assets/Art Source/Snow_mountain/snow_mountain/Prefabs/Snow_mountain.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/path.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/tree.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/rocks.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/bench.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Devil.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/street_lamp.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Angel.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Villager.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Cop.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Nurse.prefab
+- Assets/Art Source/Easy Primitive People/Prefab/Pig.prefab
+- Assets/Art Source/Fantasy Forest Village/2.prefabs/small_tree.prefab
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_fbx0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_obj0

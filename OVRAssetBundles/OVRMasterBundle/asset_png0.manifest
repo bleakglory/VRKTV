@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 473778324
+CRC: 4197133822
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 77364da5cc6be18be2eec9e5a2923e77
+    Hash: 054ca6aaedf350b14998fe109feb0f33
   TypeTreeHash:
     serializedVersion: 2
     Hash: ea5a42e0fd8ea905efa7aa926a3b8944
@@ -14,34 +14,34 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
-- Assets/Fantasy Forest Village/4.textures/path_normal.png
-- Assets/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_OCC.png
-- Assets/Fantasy Forest Village/4.textures/house_normal.png
-- Assets/Fantasy Forest Village/4.textures/banch_occ.png
-- Assets/Desert Assets/Freebies/PolyDesert Mobile/Materials/Textures/polydesert_atlas.png
-- Assets/Fantasy Forest Village/4.textures/grass_2_tex.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/path_normal.png
+- "Assets/UI/\u65E5\u97E9\u624B\u6E38\u5361\u724C\u6E38\u620F\u8D44\u6E90-\u63D0\u793A\u6846(frame)_\u7231\u7ED9\u7F51_aigei_com.png"
+- Assets/Art Source/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_OCC.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/house_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/banch_occ.png
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Materials/Textures/polydesert_atlas.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/grass_2_tex.png
 - Assets/UI/shortbutton.png
-- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground3.png
-- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground1.png
-- Assets/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_NRM.png
-- Assets/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground2.png
-- Assets/Fantasy Forest Village/4.textures/grass_01.png
+- Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Diffuse_01.png
+- Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Normal_01.png
+- Assets/Art Source/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground3.png
+- Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Ambient_01.png
+- Assets/Art Source/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground1.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/TexturesCom_WoodRough0036_1_seamless_S_NRM.png
+- Assets/Art Source/Desert Assets/Freebies/Polygon Desert Pack/Textures/Ground2.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/grass_01.png
 - Assets/UI/textbox3.png
-- Assets/Fantasy Forest Village/4.textures/fence_tex.png
-- Assets/Fantasy Forest Village/4.textures/grass_normal.png
-- Assets/Fantasy Forest Village/4.textures/path_color.png
-- Assets/Fantasy Forest Village/4.textures/fence_occ.png
-- Assets/Fantasy Forest Village/4.textures/house_addons_tex.png
-- Assets/Fantasy Forest Village/4.textures/banch_normal.png
-- Assets/Fantasy Forest Village/4.textures/house_addons_occ.png
-- Assets/Fantasy Forest Village/4.textures/house_occ.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/fence_tex.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/grass_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/path_color.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/fence_occ.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/house_addons_tex.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/banch_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/house_addons_occ.png
+- Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Neon.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/house_occ.png
 - Assets/UI/longbutton2.png
-- Assets/Fantasy Forest Village/4.textures/tree_normal.png
-- Assets/Fantasy Forest Village/4.textures/house_addons_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/tree_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/house_addons_normal.png
 - Assets/UI/close3-1.png
-- Assets/Fantasy Forest Village/4.textures/banch_tex.png
-- Assets/Fantasy Forest Village/4.textures/tree_color.png
-- Assets/Fantasy Forest Village/4.textures/rocks_normal.png
-- Assets/Fantasy Forest Village/4.textures/gence_normal.png
-- Assets/Fantasy Forest Village/4.textures/rocks_occ.png
 Dependencies: []

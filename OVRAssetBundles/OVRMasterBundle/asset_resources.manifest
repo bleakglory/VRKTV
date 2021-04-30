@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 441507080
+CRC: 3459564778
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f9e137bc448104db3b1b2b774fca2a37
+    Hash: 73bc62e94b2d4ddd2dd1082a260b4e90
   TypeTreeHash:
     serializedVersion: 2
     Hash: aa7967e8ee55b13db45a2f2c54c52c14
@@ -96,4 +96,4 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_ttf0

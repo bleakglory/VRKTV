@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 4131457306
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9771f0628fe9cbdf9d6d614cae98c1a9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Music/\u6D88\u6101.mp3"
+- "Assets/Music/\u6C5F\u5357.mp3"
+- "Assets/Music/\u540E\u6765.mp3"
+- "Assets/Music/\u597D\u50CF\u7231\u8FD9\u4E2A\u4E16\u754C\u554A.mp3"
+- "Assets/Music/\u5E74\u5C11\u6709\u4E3A.mp3"
+- "Assets/Music/\u6C34\u661F\u8BB0.mp3"
+- "Assets/Music/\u5341\u5E74.mp3"
+- "Assets/Music/\u8D77\u98CE\u4E86.mp3"
+- "Assets/Music/\u591C\u7A7A\u4E2D\u6700\u4EAE\u7684\u661F.mp3"
+- "Assets/Music/\u8001\u7537\u5B69.mp3"
+Dependencies: []

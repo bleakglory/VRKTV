@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3990468179
+CRC: 3664671119
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a73330785d89bb882ec1ce0115e62715
+    Hash: 42adf48a2d34d4a1855acca47e885607
   TypeTreeHash:
     serializedVersion: 2
     Hash: ea5a42e0fd8ea905efa7aa926a3b8944
@@ -14,9 +14,14 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
-- Assets/Snow.png
-- Assets/Forest.png
-- Assets/Desert.png
-- Assets/Fantasy Forest Village/4.textures/rocks_tex.png
-- Assets/Fantasy Forest Village/4.textures/grass_tex.png
+- Assets/UI/Snow.png
+- Assets/UI/Forest.png
+- Assets/UI/Desert.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/banch_tex.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/tree_color.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/rocks_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/gence_normal.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/rocks_occ.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/rocks_tex.png
+- Assets/Art Source/Fantasy Forest Village/4.textures/grass_tex.png
 Dependencies: []

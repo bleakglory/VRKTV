@@ -3967,7 +3967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 569696919}
-        m_MethodName: record
+        m_MethodName: playRecord
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11795,6 +11795,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+--- !u!120 &591304938 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 120006741097097638, guid: a9d2de84afb308a4796cc671d3432b4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 591304937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &611791168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22780,8 +22786,8 @@ MonoBehaviour:
   height: 2
   resPoint: 10
   lineRender: {fileID: 1302059495}
-  LayerPoint: {fileID: 956128658}
-  EventSystem: {fileID: 614519029}
+  line: {fileID: 591304938}
+  input: {fileID: 614519029}
   GM: {fileID: 569696919}
 --- !u!114 &1680139599
 MonoBehaviour:

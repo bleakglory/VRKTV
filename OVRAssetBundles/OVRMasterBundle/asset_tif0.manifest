@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1144253745
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a59089a4cc9edb4649f7e6802af34f99
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/_Barking_Dog/3D Free Modular Kit/_Textures/Metal_01.tif
+Dependencies: []

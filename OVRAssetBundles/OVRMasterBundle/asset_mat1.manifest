@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1394161046
+CRC: 1365243268
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 877d56e2f5ff9fe7536b8ca3858a51f0
+    Hash: cb81dee656bbc70ad0ed16a15761e3b3
   TypeTreeHash:
     serializedVersion: 2
     Hash: fe397485c3cec1106b49e9ff95e8f8a2
@@ -16,8 +16,12 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/Fantasy Forest Village/3.materials/house_orange_mat.mat
-- Assets/Fantasy Forest Village/3.materials/metal.mat
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/Materials/defaultMat.mat
+- Assets/Art Source/Desert Assets/Freebies/PolyDesert Mobile/Meshes/Materials/polydesert_atlas.mat
+- Assets/Art Source/Fantasy Forest Village/3.materials/ogrodzenie_Color.mat
+- Assets/Art Source/Fantasy Forest Village/3.materials/house_orange_mat.mat
+- Assets/Art Source/Fantasy Forest Village/3.materials/metal.mat
 Dependencies:
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_jpg0
-- D:/Viper's/YKY/AR/testRayser/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/HP/Documents/GitHub/VRKTV/OVRAssetBundles/OVRMasterBundle/asset_png1
