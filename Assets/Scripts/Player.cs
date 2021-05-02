@@ -9,21 +9,23 @@ public class Player : MonoBehaviour
     public GameObject rightHand;
 
     public Transform startTrans;
+    public Transform handRotation;
     public GameObject Menucanvas;
     public GameObject Returncanvas;
-    public ParticleSystem MovePointEFT;
+    public ParticleSystem MovePointEFX;
     public int height;
     public int resPoint;
-    public LineRenderer lineRender;
+    public LineRenderer PlayerMoveLineRender;
 
-    public LineRenderer line;
+    public LineRenderer UILineRender;
     public GameObject input;
     public GameManager GM;
 
-    private Transform forward;
+    //private Transform forward;
 
+    private bool _openMove;
     float Rotate;
-    Vector3[] _path;
+    private Vector3[] _path;
     void Start()
     {
 
@@ -34,15 +36,28 @@ public class Player : MonoBehaviour
     {
         if (!(Menucanvas.activeInHierarchy || Returncanvas.activeInHierarchy))
         {
-            playerMove();
-            line.enabled = false;
+            if (OVRInput.GetDown(OVRInput.Button.One))
+            {
+                _openMove = !_openMove;
+            }
+
+            if (_openMove)
+            {
+                openPlayerMove();
+                PlayerMoveLineRender.enabled = true;
+            }
+            else
+            {
+                PlayerMoveLineRender.enabled = false;
+            }
+            UILineRender.enabled = false;
             input.SetActive(false);
         }
 
        else 
         {
-            if (!line.enabled)
-                line.enabled = true;
+            if (!UILineRender.enabled)
+                UILineRender.enabled = true;
             if (!input.activeInHierarchy)
                 input.SetActive(true);
         }
@@ -51,8 +66,13 @@ public class Player : MonoBehaviour
     //LateUpdate: let camera move with canvas
     void LateUpdate()
     {
-        Menucanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, transform.TransformPoint(Vector3.forward * 2).y + 40, transform.TransformPoint(Vector3.forward * 2).z);
-        Returncanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, transform.TransformPoint(Vector3.forward * 2).y + 40, transform.TransformPoint(Vector3.forward * 2).z);
+        Menucanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
+            transform.TransformPoint(Vector3.forward * 2).y + 40, 
+            transform.TransformPoint(Vector3.forward * 2).z);
+
+        Returncanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
+            transform.TransformPoint(Vector3.forward * 2).y + 40, 
+            transform.TransformPoint(Vector3.forward * 2).z);
     }
 
     public static Vector3 GetBezierPoint(float t, Vector3 start, Vector3 center, Vector3 end)
@@ -60,11 +80,16 @@ public class Player : MonoBehaviour
         return (1 - t) * (1 - t) * start + 2 * t * (1 - t) * center + t * t * end;
     }
 
-    void playerMove()
+    void openPlayerMove()
     {
         var startPoint = startTrans.position;
         //var endPoint = new Vector3(2*transform.forward.normalized.x, transform.position.y - 0.5f, 2*transform.forward.normalized.z);
-        var endPoint = startTrans.TransformPoint(Vector3.down * 4);
+        var moveDistance = 4 - 6 * (handRotation.localRotation.x) / 45;
+        if (moveDistance <= 1)
+        {
+            moveDistance = 1;
+        }
+        var endPoint = startTrans.TransformPoint(Vector3.down * moveDistance);
         endPoint = new Vector3(endPoint.x, transform.position.y - 0.4f, endPoint.z);
         var bezierControlPoint = (startPoint + endPoint) * 0.5f + (Vector3.up * height);
 
@@ -75,13 +100,24 @@ public class Player : MonoBehaviour
             _path[i] = GetBezierPoint(t, startPoint, bezierControlPoint, endPoint);
         }
 
-        lineRender.positionCount = _path.Length;
-        lineRender.SetPositions(_path);
-        MovePointEFT.transform.position = endPoint;
-        if (OVRInput.GetDown(OVRInput.Button.One) && MovePointEFT.GetComponent<MoveJudgement>().canMove)
+        PlayerMoveLineRender.positionCount = _path.Length;
+        PlayerMoveLineRender.SetPositions(_path);
+        MovePointEFX.transform.position = endPoint;
+        if (OVRInput.GetDown(OVRInput.Button.Up) && MovePointEFX.GetComponent<MoveJudgement>().canCatch)
         {
             transform.position = new Vector3(endPoint.x, transform.position.y, endPoint.z);
         }
+
+        if (OVRInput.GetDown(OVRInput.Button.Down) && MovePointEFX.GetComponent<MoveJudgement>().canCatch)
+        {
+            if (MovePointEFX.GetComponent<MoveJudgement>().Instrument)
+            {
+                MovePointEFX.GetComponent<MoveJudgement>().Instrument.transform.position =
+                    new Vector3(startTrans.TransformPoint(Vector3.down * 1).x, 
+                    transform.position.y - 0.4f, startTrans.TransformPoint(Vector3.down * 1).z);
+            }
+        }
+        // 45 - -45
         //if(Mathf.Abs(leftHand.transform.position.y - lastLeftHandPos.y) > 0.001f || Mathf.Abs(rightHand.transform.position.y - lastRightHandPos.y) > 0.001f )
         //{
         //    Rotate = player.transform.eulerAngles.y % 360;

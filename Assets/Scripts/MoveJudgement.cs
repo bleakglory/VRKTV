@@ -5,12 +5,16 @@ using UnityEngine;
 public class MoveJudgement : MonoBehaviour
 {
     public bool canMove;
+    public bool canCatch;
+    public GameObject Instrument;
     public LineRenderer line;
     public ParticleSystem EFT;
     public GameObject player;
     void Start()
     {
+        Instrument = null;
         canMove = true;
+        canCatch = false;
     }
 
     // Update is called once per frame
@@ -44,7 +48,16 @@ public class MoveJudgement : MonoBehaviour
             canMove = false;
             GetComponent<ParticleSystem>().startColor = Color.red;
             line.SetColors(Color.red, Color.red);
-            Debug.Log("In :"+other.tag);
+            //Debug.Log("In :"+other.tag);
+        }
+
+        if (other.CompareTag("Instrument"))
+        {
+            canCatch = true;
+            canMove = false;
+            GetComponent<ParticleSystem>().startColor = Color.yellow;
+            line.SetColors(Color.yellow, Color.yellow);
+            Instrument = other.gameObject;
         }
     }
 
@@ -55,7 +68,16 @@ public class MoveJudgement : MonoBehaviour
             canMove = true;
             GetComponent<ParticleSystem>().startColor = Color.green;
             line.SetColors(Color.green, Color.green);
-            Debug.Log("Out :" + other.tag);
+            //Debug.Log("Out :" + other.tag);
+        }
+
+        if (other.CompareTag("Instrument"))
+        {
+            canCatch = false;
+            canMove = true;
+            GetComponent<ParticleSystem>().startColor = Color.green;
+            line.SetColors(Color.green, Color.green);
+            Instrument = null;
         }
     }
 }
