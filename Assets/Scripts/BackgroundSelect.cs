@@ -29,7 +29,7 @@ public class BackgroundSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.SetInt("Background", 0);
         systemNotification.SetActive(false);
     }
 

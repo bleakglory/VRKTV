@@ -30,6 +30,7 @@ public class signControl : MonoBehaviour
 
     public TMP_Text systemInformation;
     public GameObject systemNotificationPanel;
+    public GameObject systemPanel;
 
 
     bool isLogged = false;
@@ -70,6 +71,7 @@ public class signControl : MonoBehaviour
             time += Time.deltaTime;
             if (time >= 3)
             {
+                systemPanel.transform.position = new Vector3(0, 100, 0);
                 systemNotificationPanel.SetActive(false);
                 cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, Quaternion.LookRotation(points[i].transform.position - cameraTransform.position), rotateSpeed * Time.deltaTime);
                 distance = Vector3.Distance(cameraTransform.position, points[i].transform.position);

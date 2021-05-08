@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public GameObject player;
-    public GameObject leftHand;
-    public GameObject rightHand;
+    public GameObject Instrument;
 
-    public Transform startTrans;
+    public Transform leftHand;
+    public Transform rightHand;
+
     public Transform handRotation;
-    public GameObject Menucanvas;
-    public GameObject Returncanvas;
+    public GameObject MenuCanvas;
+    public GameObject ReturnCanvas;
+    public GameObject TipCanvas;
+    public GameObject LrcCanvas;
     public ParticleSystem MovePointEFX;
     public int height;
     public int resPoint;
@@ -24,17 +28,20 @@ public class Player : MonoBehaviour
     //private Transform forward;
 
     private bool _openMove;
+    private bool _isCatchInstru;
+    private GameObject _instrument;
     float Rotate;
     private Vector3[] _path;
+
     void Start()
     {
-
+        _isCatchInstru = false;
     }
 
 
     private void Update()
     {
-        if (!(Menucanvas.activeInHierarchy || Returncanvas.activeInHierarchy))
+        if (!(MenuCanvas.activeInHierarchy || ReturnCanvas.activeInHierarchy))
         {
             if (OVRInput.GetDown(OVRInput.Button.One))
             {
@@ -44,14 +51,26 @@ public class Player : MonoBehaviour
             if (_openMove)
             {
                 openPlayerMove();
+
                 PlayerMoveLineRender.enabled = true;
+                MovePointEFX.Play();
             }
             else
             {
                 PlayerMoveLineRender.enabled = false;
+                MovePointEFX.Simulate(0);
             }
             UILineRender.enabled = false;
             input.SetActive(false);
+            Instrument.SetActive(true);
+
+            if (rightHand.GetComponent<Instrument>().HasPlayed && !rightHand.GetComponent<AudioSource>().isPlaying)
+            {
+                Instrument.SetActive(false);
+                LrcCanvas.SetActive(true);
+                TipCanvas.SetActive(true);
+                //GM.isStart = true;
+            }
         }
 
        else 
@@ -60,19 +79,37 @@ public class Player : MonoBehaviour
                 UILineRender.enabled = true;
             if (!input.activeInHierarchy)
                 input.SetActive(true);
+
+            LrcCanvas.SetActive(false);
+            TipCanvas.SetActive(false);
         }
+
     }
 
     //LateUpdate: let camera move with canvas
     void LateUpdate()
     {
-        Menucanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
+        MenuCanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
             transform.TransformPoint(Vector3.forward * 2).y + 40, 
             transform.TransformPoint(Vector3.forward * 2).z);
 
-        Returncanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
+        ReturnCanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x, 
             transform.TransformPoint(Vector3.forward * 2).y + 40, 
             transform.TransformPoint(Vector3.forward * 2).z);
+
+        TipCanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x,
+    transform.TransformPoint(Vector3.forward * 2).y + 40,
+    transform.TransformPoint(Vector3.forward * 2).z);
+
+        LrcCanvas.transform.position = new Vector3(transform.TransformPoint(Vector3.forward * 2).x,
+    transform.TransformPoint(Vector3.forward * 2).y + 40,
+    transform.TransformPoint(Vector3.forward * 2).z);
+
+        if (_isCatchInstru && !rightHand.GetComponent<Instrument>().HasPlayed)
+        {
+            catchInstrument(_instrument);
+        }
+
     }
 
     public static Vector3 GetBezierPoint(float t, Vector3 start, Vector3 center, Vector3 end)
@@ -82,14 +119,14 @@ public class Player : MonoBehaviour
 
     void openPlayerMove()
     {
-        var startPoint = startTrans.position;
+        var startPoint = rightHand.position;
         //var endPoint = new Vector3(2*transform.forward.normalized.x, transform.position.y - 0.5f, 2*transform.forward.normalized.z);
-        var moveDistance = 4 - 6 * (handRotation.localRotation.x) / 45;
+        var moveDistance = 4 + 6 * (handRotation.localRotation.x) / 45;
         if (moveDistance <= 1)
         {
             moveDistance = 1;
         }
-        var endPoint = startTrans.TransformPoint(Vector3.down * moveDistance);
+        var endPoint = rightHand.TransformPoint(Vector3.down * moveDistance);
         endPoint = new Vector3(endPoint.x, transform.position.y - 0.4f, endPoint.z);
         var bezierControlPoint = (startPoint + endPoint) * 0.5f + (Vector3.up * height);
 
@@ -103,19 +140,16 @@ public class Player : MonoBehaviour
         PlayerMoveLineRender.positionCount = _path.Length;
         PlayerMoveLineRender.SetPositions(_path);
         MovePointEFX.transform.position = endPoint;
-        if (OVRInput.GetDown(OVRInput.Button.Up) && MovePointEFX.GetComponent<MoveJudgement>().canCatch)
+        if (OVRInput.GetDown(OVRInput.Button.Up) && MovePointEFX.GetComponent<MoveJudgement>().canMove)
         {
+            Debug.Log("Move To the Point !!!!!");
             transform.position = new Vector3(endPoint.x, transform.position.y, endPoint.z);
         }
 
         if (OVRInput.GetDown(OVRInput.Button.Down) && MovePointEFX.GetComponent<MoveJudgement>().canCatch)
         {
-            if (MovePointEFX.GetComponent<MoveJudgement>().Instrument)
-            {
-                MovePointEFX.GetComponent<MoveJudgement>().Instrument.transform.position =
-                    new Vector3(startTrans.TransformPoint(Vector3.down * 1).x, 
-                    transform.position.y - 0.4f, startTrans.TransformPoint(Vector3.down * 1).z);
-            }
+           _instrument = MovePointEFX.GetComponent<MoveJudgement>().Instrument;
+            _isCatchInstru = true;
         }
         // 45 - -45
         //if(Mathf.Abs(leftHand.transform.position.y - lastLeftHandPos.y) > 0.001f || Mathf.Abs(rightHand.transform.position.y - lastRightHandPos.y) > 0.001f )
@@ -148,5 +182,13 @@ public class Player : MonoBehaviour
         //lastLeftHandPos = leftHand.transform.position;
     }
 
+    void catchInstrument(GameObject obj)
+    {
+        _instrument.transform.position =
+        new Vector3(leftHand.transform.position.x, leftHand.transform.position.y,
+        leftHand.transform.TransformPoint(Vector3.forward * 0.1f).z);
+        _instrument.transform.forward = transform.forward;
+        _instrument.transform.rotation = Quaternion.Euler(leftHand.transform.rotation.x, leftHand.transform.rotation.y, leftHand.transform.rotation.z + 55);
+    }
 
 }

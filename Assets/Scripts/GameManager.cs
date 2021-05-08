@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Canvas recordCanv;
     public AudioSource[] musicList;
     public GameObject[] backgrounds;
+    public AudioSource[] StrongthenSound;
     private int Frequency = 16000; //录音频率
     private int BitRate = 16; //比特率
     private int MicSecond = 3;  //每隔3秒，保存一下录音数据
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     private string path = "";
     [SerializeField]
     private AudioSource au;
+    private string[] _songName = new string[5];
     #endregion
 
     void Start()
@@ -35,6 +37,17 @@ public class GameManager : MonoBehaviour
         recordCanv.gameObject.SetActive(false);
         isStart = false;
         isPlay = false;
+
+        for (int i = 0; i < StrongthenSound.Length - 1; i++)
+        {
+            StrongthenSound[i] = au;
+        }
+
+        _songName[0] = "老男孩";
+        _songName[1] = "年少有为";
+        _songName[2] = "起风了";
+        _songName[3] = "十年";
+        _songName[4] = "水星记";
     }
 
     private void Update()
@@ -46,9 +59,10 @@ public class GameManager : MonoBehaviour
 
         if(isPlay == true)
         {
-            if(!musicList[PlayerPrefs.GetInt("Music")].isPlaying)
+            if(!musicList[PlayerPrefs.GetInt("Music") - 1].isPlaying)
             {
                 OnStopClick();
+                GetComponent<MusicVisualization>().thisAudioSource = null;
                 recordCanv.gameObject.SetActive(true);
                 isPlay = false;
             }
@@ -57,7 +71,10 @@ public class GameManager : MonoBehaviour
     }
     void musicPlay()
     {
-        musicList[PlayerPrefs.GetInt("Music")].Play();
+        musicList[PlayerPrefs.GetInt("Music") - 1].Play();
+        GetComponent<MusicVisualization>().thisAudioSource = musicList[PlayerPrefs.GetInt("Music") - 1];
+        GetComponent<Lrc>().enabled = true;
+        GetComponent<Lrc>().songPath = _songName[PlayerPrefs.GetInt("Music") - 1];
         isStart = false;
         isPlay = true;
         OnStartClick();
@@ -74,13 +91,13 @@ public class GameManager : MonoBehaviour
 
     public void playRecord()
     {
-        musicList[PlayerPrefs.GetInt("Music")].Play();
+        musicList[PlayerPrefs.GetInt("Music") - 1].Play();
         OnPlayClick();
     }
 
     public void backToMenu()
     {
-        musicList[PlayerPrefs.GetInt("Music")].Stop();
+        musicList[PlayerPrefs.GetInt("Music") - 1].Stop();
         recordCanv.gameObject.SetActive(false);
         menuCanv.gameObject.SetActive(true);
     }
@@ -173,6 +190,10 @@ public class GameManager : MonoBehaviour
         au.mute = false;
         au.loop = false;
         au.Play();
+        foreach (AudioSource au in StrongthenSound)
+        {
+            au.Play();
+        }
 
     }
 
