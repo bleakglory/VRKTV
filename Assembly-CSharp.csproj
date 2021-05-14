@@ -246,10 +246,12 @@
     <Compile Include="Assets\Scripts\CameraRecorder.cs" />
     <Compile Include="Assets\Scripts\characterSelect.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\MusicVisualization.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerSetting.cs" />
     <Compile Include="Assets\Scripts\ScenesSelect.cs" />
     <Compile Include="Assets\Scripts\signControl.cs" />
+    <Compile Include="Assets\Scripts\TestController.cs" />
     <Compile Include="Assets\Scripts\UserController.cs" />
     <Compile Include="Assets\Scripts\WAVFile.cs" />
     <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
@@ -269,6 +271,7 @@
     <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\ThirdPartyNotices.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\ButtonGlow.shader" />
+    <None Include="Assets\Resources\RimLight.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBS.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered.shader" />
     <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />

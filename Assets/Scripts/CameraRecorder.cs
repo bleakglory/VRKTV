@@ -21,11 +21,14 @@ public class CameraRecorder : MonoBehaviour
 
     public Camera videoSource;
 
-    private bool recording = false;
-    private float startingTime = 0;
+    private static bool recording = false;
+    public static bool Trigger = false;
+    private static float startingTime = 0;
 
-    private List<GCHandle> frames;  //Acumulated frames
-    private List<GCHandle> samples; //Acummulated samples
+    private static List<GCHandle> frames;  //Acumulated frames
+    private static List<GCHandle> samples; //Acummulated samples
+
+
 
     void Start()
     {
@@ -34,10 +37,13 @@ public class CameraRecorder : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && videoSource)
+        //Debug.Log("Trigger:" + Trigger);
+        if (Trigger && videoSource)
         {
+            
+            Trigger = false;
             recording = !recording;
             if (recording)
             {

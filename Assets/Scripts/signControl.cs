@@ -54,15 +54,6 @@ public class signControl : MonoBehaviour
     void Update()
     { 
         
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.Log("MergeFile:~");
-            String[] filelist=new String[] { "Assets/Music/houlai.wav", "Assets/Music/shinian.wav" };
-            String outputfilename = "Assets/Music/mergeaudiofile.wav";
-            String tempdir = "Assets/Music/temp";
-            WAVFile.MergeAudioFiles(filelist, outputfilename, tempdir);
-        }
-        
     }
 
     public void clickSignIn()

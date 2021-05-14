@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
             if(!musicList[PlayerPrefs.GetInt("Music")].isPlaying)
             {
                 OnStopClick();
+                GetComponent<MusicVisualization>().thisAudioSource = null;
                 recordCanv.gameObject.SetActive(true);
                 isPlay = false;
             }
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
     void musicPlay()
     {
         musicList[PlayerPrefs.GetInt("Music")].Play();
+        GetComponent<MusicVisualization>().thisAudioSource = musicList[PlayerPrefs.GetInt("Music")];
         isStart = false;
         isPlay = true;
         OnStartClick();

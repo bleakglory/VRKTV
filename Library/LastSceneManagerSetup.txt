@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Sign_In_Up.unity
+- path: Assets/Scenes/KTV.unity
   isLoaded: 1
   isActive: 1
