@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Viper's/YKY/AR/testRayser/VRKTV202.apk
+D:/application/testktv.apk
 SceneListBegin?
 Assets/Test_sign.unity
 Assets/Test_lobby.unity
@@ -289,6 +289,7 @@ a9f049c3dc82bb36fdb142e4d6a2658d Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e1300922cc039f41ab46a47f4cb05898 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 a4b88f3b08f1f148e04c6c3d7544c9ec Oculus.VR.dll:.OVRChromaticAberration
 3a0fa4528690e89614a27f9b88a889c4 Oculus.VR.dll:.OVRSceneSampleController
+3222a9c0d5b8ae5b6e1965c95d64360c Assembly-CSharp.dll:.Lrc
 71bb6a6b6c8f052f948db64c7dd3ca4f Oculus.Platform.dll:Oculus.Platform.Samples.VrHoops.PlatformManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OvrAvatarSettingsEditor
 88cc9df3c6fc697bfbeacd24c0d6f2d7 UnityEngine.TestRunner.dll:UnityEngine.TestTools.BeforeAfterTestCommandState
@@ -363,4 +364,22 @@ cd06391f9225499fb9ea605ab668b015 Oculus.Platform.dll:Oculus.Platform.Samples.VrH
 8cf111447f1f4754264a4de62c3f57df Assembly-CSharp.dll:.OVRLipSyncContextTextureFlip
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DebugUISample
 18235af34262c9d1c806370a73196694 Assembly-CSharp.dll:OculusSampleFramework.ButtonController
-3222a9c0d5b8ae5b6e1965c95d64360c Assembly-CSharp.dll:.Lrc
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityThread
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:FFmpeg.Demo.TrimView
+84bb677bf23ac03b407cc0807b08bc5a Assembly-CSharp.dll:FFmpeg.Demo.AppendView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:FFmpeg.Demo.EncodeView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:FFmpeg.Demo.ConvertView
+8cd800ef27e9c0c00c6cd1fcad74af28 Assembly-CSharp.dll:FFmpeg.Demo.DefaultFieldInitializer
+a013665ebc038f25139d7a88a87109d7 Assembly-CSharp.dll:FFmpeg.Demo.Console
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.RecSystemAudio
+7b1da0daae330f7b97b1418c2dbeebd7 Assembly-CSharp.dll:FFmpeg.Demo.FFmpegDemo
+9c798d62ee2d0dc4bfce9fb94b8540a0 Assembly-CSharp.dll:FFmpeg.Demo.REC.RECView
+1cd5741d680c06685594718ace3c5c18 Assembly-CSharp.dll:FFmpeg.Demo.WatermarkView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:FFmpeg.FFmpegWrapper
+441511d750e3909b8f2b28feb2d8a03f Assembly-CSharp.dll:FFmpeg.Demo.ProgressView
+26c8a76f9cba4a6d23a2c2ce5e6c9d9a Assembly-CSharp.dll:FFmpeg.Demo.CompressView
+e4775468942a208d1042f6e91c570f03 Assembly-CSharp.dll:FFmpeg.Demo.AddSoundView
+e84ad58f8fa8740458be470e20fbf4b9 Assembly-CSharp.dll:.RecMicAudio
+cddd9c6bdf94effbf3bfda05ae842a9e Assembly-CSharp.dll:FFmpeg.Demo.REC.FFmpegREC
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:FFmpeg.Demo.DecodeView
+9685926d080aec0889e9b0a19ef715c1 Assembly-CSharp.dll:FFmpeg.Demo.REC.RecDemoBall

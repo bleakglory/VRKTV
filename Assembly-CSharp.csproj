@@ -47,14 +47,10 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.4.32f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2018.4.32f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -64,6 +60,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegCommands.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegConfigs.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegHandler.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegParser.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegHelpers\FFmpegProgressParser.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegUtils\UnityThread.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegCode\FFmpegWrapper.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemo.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\Console.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoHelpers\DefaultFieldInitializer.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\AddSoundView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\AppendView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\CompressView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\ConvertView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\DecodeView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\EncodeView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\ProgressView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\TrimView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegDemoView\WatermarkView.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegREC.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecMicAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecAudio\RecSystemAudio.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECHelpers\RecDemoBall.cs" />
+    <Compile Include="Assets\FFmpeg\FFmpegDemo\FFmpegRECView\RECView.cs" />
+    <Compile Include="Assets\FFmpeg\Standalone\StandaloneProxy.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -268,6 +290,7 @@
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\FFmpeg\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\Locomotion\Materials\ColumnGlow.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
@@ -282,25 +305,25 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -501,13 +524,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/vrlab/Documents/GitHub/VRKTV/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
