@@ -12389,6 +12389,8 @@ GameObject:
   - component: {fileID: 569696917}
   - component: {fileID: 569696921}
   - component: {fileID: 569696920}
+  - component: {fileID: 569696923}
+  - component: {fileID: 569696922}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12593,6 +12595,31 @@ MonoBehaviour:
   thisAudioSource: {fileID: 0}
   cubePrototype: {fileID: 125741294}
   startPoint: {fileID: 1775823857}
+--- !u!114 &569696922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569696916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d620b32d46811f543882718111a6c862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &569696923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569696916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44be4d3b327bdd8418161d86f00c74e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoSource: {fileID: 397578436}
 --- !u!1001 &570173454
 PrefabInstance:
   m_ObjectHideFlags: 0
