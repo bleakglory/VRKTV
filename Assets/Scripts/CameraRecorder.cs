@@ -35,7 +35,9 @@ public class CameraRecorder : MonoBehaviour
         }
         public void Packvideo()
         {
+            Debug.Log("startpacktime:" + DateTime.Now.TimeOfDay.ToString());
             PackVideo(videoPath, width, height, colors, frameCount, duration);
+            Debug.Log("endpacktime:" + DateTime.Now.TimeOfDay.ToString());
         }
     }
     
@@ -75,7 +77,7 @@ public class CameraRecorder : MonoBehaviour
             else
             {
                 Debug.Log("Stoping the recording");
-                Debug.Log("videopath:" + Application.dataPath + "/CameraRecorder/RecordedVideo.avi");
+                Debug.Log("videopath:" + Application.dataPath + "/CameraRecorder/RecordedVideo.mp4");
                 float duration = Time.time - startingTime;
 
                 //Create a C friendly Array for the frames and then Call the C Function to Pack the video
@@ -85,9 +87,9 @@ public class CameraRecorder : MonoBehaviour
                     System.IntPtr[] framesArray = new System.IntPtr[frameCount];
                     for (int i = 0; i < frameCount; i++)
                         framesArray[i] = frames[i].AddrOfPinnedObject();
-                    Debug.Log("time before packvideo:"+Time.time);
+                    Debug.Log("width:" + videoSource.pixelWidth + " height:" + videoSource.pixelHeight);
                     PackVideoClass pack = new PackVideoClass(
-                        Application.dataPath + "/CameraRecorder/RecordedVideo.avi",
+                        Application.dataPath + "/CameraRecorder/RecordedVideo.mp4",
                         videoSource.pixelWidth,
                         videoSource.pixelHeight,
                         framesArray,
@@ -104,7 +106,6 @@ public class CameraRecorder : MonoBehaviour
                         frameCount,
                         duration);
                     */
-                    Debug.Log("time after packvideo:" + Time.time);
                 }
 
                 //Free the accumulated frames
