@@ -123,6 +123,7 @@ public class signControl : MonoBehaviour
 
     public void clickConfirm()
     {
+        //Sign In
         if (isSignIn)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -162,6 +163,7 @@ public class signControl : MonoBehaviour
         }
         else
         {
+            //Sign Up
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 systemNotificationPanel.SetActive(true);
@@ -210,6 +212,11 @@ public class signControl : MonoBehaviour
     public void saveConfirmPassword(string text)
     {
         confirmPassword = text;
+    }
+
+    public void checkPasswordIsValid(string passward)
+    {
+
     }
 
 

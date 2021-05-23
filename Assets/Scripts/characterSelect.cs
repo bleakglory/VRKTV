@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class characterSelect : MonoBehaviour
 {
     public GameObject[] characterList;
-    private int selectedIndex = 0;
+    public int selectedIndex = 0;
     bool isConfirmCharacter = false;
     public Transform cameraTransform;
     public GameObject[] points;
@@ -24,6 +24,7 @@ public class characterSelect : MonoBehaviour
     void Start()
     {
         systemNotification.SetActive(false);
+        PlayerPrefs.SetInt("player", selectedIndex);
     }
 
     // Update is called once per frame
@@ -76,7 +77,7 @@ public class characterSelect : MonoBehaviour
     public void previosCharacter()
     {
         
-        if (selectedIndex == -1)
+        if (selectedIndex == 0)
         {
             characterList[selectedIndex].SetActive(false);
             selectedIndex = characterList.Length - 1;

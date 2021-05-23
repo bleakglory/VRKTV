@@ -62,7 +62,6 @@ public class Player : MonoBehaviour
             }
             UILineRender.enabled = false;
             input.SetActive(false);
-            Instrument.SetActive(true);
 
             if (rightHand.GetComponent<Instrument>().HasPlayed && !rightHand.GetComponent<AudioSource>().isPlaying)
             {
@@ -70,6 +69,10 @@ public class Player : MonoBehaviour
                 LrcCanvas.SetActive(true);
                 TipCanvas.SetActive(true);
                 //GM.isStart = true;
+            }
+            else
+            {
+                Instrument.SetActive(true);
             }
         }
 

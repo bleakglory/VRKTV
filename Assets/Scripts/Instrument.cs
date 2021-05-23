@@ -5,6 +5,9 @@ using UnityEngine;
 public class Instrument : MonoBehaviour
 {
     public bool HasPlayed;
+    public GameObject Guitar;
+    public Transform OriPos;
+    public GameObject MicrophoneModel;
 
     [SerializeField]
     private bool _startCountDown;
@@ -34,11 +37,13 @@ public class Instrument : MonoBehaviour
 
             if (_handStartPoint.y - transform.position.y > 0.01f)
             {
-                Debug.Log("Distance : " + Vector3.Distance(_handStartPoint, transform.position));
                 if (!GetComponent<AudioSource>().isPlaying)
                 {
                     GetComponent<AudioSource>().Play();
                     HasPlayed = true;
+                    MicrophoneModel.SetActive(true);
+                    GetComponent<SkinnedMeshRenderer>().enabled = false;
+                    GetComponent<BoxCollider>().enabled = false;
                 }
             }
         }

@@ -6,18 +6,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 public class GameManager : MonoBehaviour
 {
     #region param
     public Canvas menuCanv;
     public Canvas recordCanv;
+    public TMP_Text txt;
     public AudioSource[] musicList;
     public GameObject[] backgrounds;
     public AudioSource[] StrongthenSound;
-    private int Frequency = 16000; //录音频率
+    public Instrument instrument;
+    private int Frequency = 48000; //录音频率
     private int BitRate = 16; //比特率
-    private int MicSecond = 3;  //每隔3秒，保存一下录音数据
+    private int MicSecond = 300;  
     public bool isStart;
 
     private bool isPlay;
@@ -26,6 +31,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AudioSource au;
     private string[] _songName = new string[5];
+    private string[] devices;
+    private bool _isHaveMicrophone;
+    private bool _startSoundBack;
     #endregion
 
     void Start()
@@ -37,10 +45,36 @@ public class GameManager : MonoBehaviour
         recordCanv.gameObject.SetActive(false);
         isStart = false;
         isPlay = false;
+        _startSoundBack = false;
 
         for (int i = 0; i < StrongthenSound.Length - 1; i++)
         {
             StrongthenSound[i] = au;
+        }
+
+        devices = Microphone.devices;
+
+        if (devices.Length > 0)
+
+        {
+
+            _isHaveMicrophone = true;
+
+            foreach ( string text in devices)
+            {
+                txt.text += "Microphone Checked:" + devices[0] + "\n";
+            }
+            
+            UnityEngine.Debug.Log(devices[0]);
+        }
+
+        else
+        {
+
+            _isHaveMicrophone = false;
+
+            txt.text = "No Microphone";
+
         }
 
         _songName[0] = "老男孩";
@@ -52,7 +86,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(isStart == true)
+        if(isStart == true && instrument.HasPlayed)
         {
             musicPlay();
         }
@@ -67,6 +101,26 @@ public class GameManager : MonoBehaviour
                 isPlay = false;
             }
         }
+        //if (Microphone.GetPosition(devices[0]) > 500)
+        //{
+        //    _startSoundBack = true;
+        //}
+
+        //if ( !_startSoundBack)
+        //{
+        //    foreach (AudioSource au in StrongthenSound)
+        //    {
+        //        au.Play();
+        //        au.timeSamples = Microphone.GetPosition(devices[0]);
+        //        au.Play();
+        //    }
+
+        //    au.Play();
+        //    au.timeSamples = Microphone.GetPosition(devices[0]);
+        //    au.Play();
+
+        //    _startSoundBack = true;
+        //}
 
     }
     void musicPlay()
@@ -87,6 +141,21 @@ public class GameManager : MonoBehaviour
     public void save()
     {
         WavFromClip(path + "/test.wav", au.clip); //将录音保存为wav
+
+        string wav = path + "/test.wav";
+        using (Process proc = new Process())
+        {
+            proc.StartInfo.FileName = Application.streamingAssetsPath + @"SimpleDenoise.exe";
+            proc.StartInfo.Arguments = string.Format(@" ""{0}""", wav);
+
+            proc.StartInfo.CreateNoWindow = true;
+
+            proc.StartInfo.UseShellExecute = false;
+
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.Start();
+            proc.Close();
+        }
     }
 
     public void playRecord()
@@ -100,6 +169,12 @@ public class GameManager : MonoBehaviour
         musicList[PlayerPrefs.GetInt("Music") - 1].Stop();
         recordCanv.gameObject.SetActive(false);
         menuCanv.gameObject.SetActive(true);
+        instrument.gameObject.SetActive(true);
+        instrument.HasPlayed = false;
+        instrument.Guitar.transform.position = instrument.OriPos.position;
+        instrument.GetComponent<SkinnedMeshRenderer>().enabled = true;
+        instrument.GetComponent<BoxCollider>().enabled = true;
+        instrument.MicrophoneModel.SetActive(false);
     }
 
 
@@ -128,30 +203,30 @@ public class GameManager : MonoBehaviour
         startMusic(5);
     }
 
-    public void six()
-    {
-        startMusic(6);
-    }
+    //public void six()
+    //{
+    //    startMusic(6);
+    //}
 
-    public void seven()
-    {
-        startMusic(7);
-    }
+    //public void seven()
+    //{
+    //    startMusic(7);
+    //}
 
-    public void eight()
-    {
-        startMusic(8);
-    }
+    //public void eight()
+    //{
+    //    startMusic(8);
+    //}
 
-    public void nine()
-    {
-        startMusic(9);
-    }
+    //public void nine()
+    //{
+    //    startMusic(9);
+    //}
 
-    public void ten()
-    {
-        startMusic(10);
-    }
+    //public void ten()
+    //{
+    //    startMusic(10);
+    //}
     #endregion
 
     void startMusic(int num)
@@ -165,10 +240,26 @@ public class GameManager : MonoBehaviour
     //开始录音
     void OnStartClick()
     {
-        au.Stop();
-        au.loop = false;
-        au.mute = true;
-        au.clip = Microphone.Start(null, true, MicSecond, Frequency);
+        if ((_isHaveMicrophone == false) || (Microphone.IsRecording(devices[0])))
+        {
+            return;
+        }
+
+        //au.Stop();
+        //au.loop = false;
+        //au.mute = true;
+        au.clip = Microphone.Start(devices[0], true, MicSecond, Frequency);
+
+        foreach (AudioSource au in StrongthenSound)
+        {
+            au.Play();
+            au.timeSamples = Microphone.GetPosition(devices[0]);
+            au.Play();
+        }
+
+        au.timeSamples = Microphone.GetPosition(devices[0]);
+        au.Play();
+
     }
 
     //停止录音....
@@ -208,6 +299,7 @@ public class GameManager : MonoBehaviour
             ConvertAndWrite(fs, au.clip);
             WriteHeader(fs, au.clip); //wav文件头
         }
+        
     }
 
     private FileStream CreateEmpty(string filepath)

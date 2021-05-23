@@ -89,6 +89,7 @@
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPPropagationMaterialEditor.cs" />
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPPropagationSerializationManager.cs" />
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPReflectionCustomGUI.cs" />
+    <Compile Include="Assets\TirgamesAssets\Utility\Shaders\Editor\TirgamesStandardShaderGUI.cs" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
@@ -104,11 +105,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.WindowsMR.Editor">
+      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.XR.WindowsMR.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.WindowsMR">
+      <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/Unity.XR.WindowsMR.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.32f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

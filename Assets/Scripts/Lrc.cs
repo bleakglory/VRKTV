@@ -16,6 +16,7 @@ public class Lrc : MonoBehaviour
     public TMP_Text lrcText;
     public double offest = 0.0;
     public String songPath;
+    public Lrc LRCs;
 
     void Start()
     {
@@ -29,8 +30,13 @@ public class Lrc : MonoBehaviour
         //songPath = "起风了.lrc"; //定义歌的文件名
         //songPath = "后来.lrc"; //定义歌的文件名
         //songPath = "水星记.lrc"; //定义歌的文件名
+#if UNITY_EDITOR
+        Lrc lrc = Lrc.InitLrc(Application.streamingAssetsPath + "/" + songPath + ".lrc");
+#elif UNITY_ANDROID
+        //Lrc lrc = Lrc.InitLrc("jar:file://" + Application.persistentDataPath + "//IRC//" + songPath + ".lrc");
+        Lrc lrc = Lrc.InitLrc(Application.streamingAssetsPath + "//" + songPath + ".lrc");
+#endif
 
-        Lrc lrc = Lrc.InitLrc(Application.dataPath + "/lyricDoc/" + songPath + ".lrc");
         StartCoroutine(ShowLrc(lrc.LrcWord)); //显示歌词
 
     }
