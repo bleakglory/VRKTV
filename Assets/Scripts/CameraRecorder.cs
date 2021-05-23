@@ -48,7 +48,8 @@ public class CameraRecorder : MonoBehaviour
     private static bool recording = false;
     public static bool Trigger = false;
     private static float startingTime = 0;
-
+    private string path = null;
+    private string currentUser = null;
     private static List<GCHandle> frames;  //Acumulated frames
     private static List<GCHandle> samples; //Acummulated samples
 
@@ -56,10 +57,14 @@ public class CameraRecorder : MonoBehaviour
 
     void Start()
     {
+        path = Application.persistentDataPath + "/Users";
         frames = new List<GCHandle>();
         samples = new List<GCHandle>();
     }
-
+    void Update()
+    {
+        currentUser = GetComponent<UserController>().GetCurrentUser();
+    }
 
     void FixedUpdate()
     {
@@ -77,9 +82,9 @@ public class CameraRecorder : MonoBehaviour
             else
             {
                 Debug.Log("Stoping the recording");
-                Debug.Log("videopath:" + Application.dataPath + "/CameraRecorder/RecordedVideo.mp4");
+                //Debug.Log("videopath:" + Application.dataPath + "/CameraRecorder/RecordedVideo.mp4");
                 float duration = Time.time - startingTime;
-
+                string videoName = path + "/" + currentUser + "/Videos" + "/Video_" + DateTime.Now.ToString("MM_dd_HH_mm_ss");
                 //Create a C friendly Array for the frames and then Call the C Function to Pack the video
                 int frameCount = frames.Count;
                 if (frameCount > 0)
@@ -89,7 +94,8 @@ public class CameraRecorder : MonoBehaviour
                         framesArray[i] = frames[i].AddrOfPinnedObject();
                     Debug.Log("width:" + videoSource.pixelWidth + " height:" + videoSource.pixelHeight);
                     PackVideoClass pack = new PackVideoClass(
-                        Application.dataPath + "/CameraRecorder/RecordedVideo.mp4",
+                        //Application.dataPath + "/CameraRecorder/RecordedVideo.mp4",
+                        videoName,
                         videoSource.pixelWidth,
                         videoSource.pixelHeight,
                         framesArray,

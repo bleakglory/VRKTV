@@ -10,6 +10,7 @@ public class TestController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log(DateTime.Now.ToString("MM_dd_HH_mm_ss"));
         Mp4File mp4 = new Mp4File();
         if (mp4.Open(@"C:\Users\vrlab\Documents\GitHub\VRKTV\Assets\CameraRecorder\RecordedVideo.mp4"))
         {

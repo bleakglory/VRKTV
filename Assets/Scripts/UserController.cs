@@ -13,7 +13,8 @@ public class UserController : MonoBehaviour
     private Dictionary<string, string> infos = new Dictionary<string, string>() {
         {"password",""}
     };
-    private string path="";
+    private string path=null;
+    private string CurrentUser=null;
     //private string path = System.Environment.CurrentDirectory+@"\Users";
     void Start()
     {
@@ -66,6 +67,7 @@ public class UserController : MonoBehaviour
         // Wrong password
         if (!Comparepwd(username,md5pwd)) return 2;
         // Successful login
+        CurrentUser = username;
         return 0;
     }
     public int Register(string username,string password)
@@ -107,5 +109,9 @@ public class UserController : MonoBehaviour
                 sw.WriteLine(s + ',' + userinfo[s]);
             }
         }
+    }
+    public string GetCurrentUser()
+    {
+        return CurrentUser;
     }
 }

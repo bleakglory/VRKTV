@@ -235,6 +235,7 @@
     <Compile Include="Assets\Scripts\BackgroundSelect.cs" />
     <Compile Include="Assets\Scripts\CameraRecorder.cs" />
     <Compile Include="Assets\Scripts\characterSelect.cs" />
+    <Compile Include="Assets\Scripts\FileList.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Instrument.cs" />
     <Compile Include="Assets\Scripts\Lrc.cs" />
