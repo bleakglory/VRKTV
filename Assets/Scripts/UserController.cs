@@ -13,7 +13,7 @@ public class UserController : MonoBehaviour
     private Dictionary<string, string> infos = new Dictionary<string, string>() {
         {"password",""}
     };
-    private string path="";
+    private string path=null;
     //private string path = System.Environment.CurrentDirectory+@"\Users";
     void Start()
     {
@@ -25,8 +25,6 @@ public class UserController : MonoBehaviour
         {
             users.Add(d.Name, GetUserInfo(d.Name + "/info.txt"));
         }
-        Debug.Log(path);
-        Debug.Log(MD5Encrypt("123456"));
     }
     private Dictionary<string,string> GetUserInfo(string userpath)
     {
@@ -94,13 +92,16 @@ public class UserController : MonoBehaviour
         if (users[username]["password"].Equals(pwd)) return true;
         else return false;
     }
-    private void SaveUser(string username,Dictionary<string,string> userinfo)
+    private void SaveUser(string username, Dictionary<string, string> userinfo)
     {
         string userFolderPath = path + "/" + username;
         string userInfoPath = userFolderPath + "/info.txt";
         if (!Directory.Exists(userFolderPath)) Directory.CreateDirectory(userFolderPath);
+        if (!Directory.Exists(userFolderPath + "/Videos")) Directory.CreateDirectory(userFolderPath + "/Videos");
+        if (!Directory.Exists(userFolderPath + "/Audios")) Directory.CreateDirectory(userFolderPath + "/Audios");
+        if (!Directory.Exists(userFolderPath + "/Cache")) Directory.CreateDirectory(userFolderPath + "/Cache");
         if (!File.Exists(userInfoPath)) File.Create(userInfoPath).Dispose();
-        using (StreamWriter sw =new StreamWriter(userInfoPath))
+        using (StreamWriter sw = new StreamWriter(userInfoPath))
         {
             foreach (string s in userinfo.Keys)
             {

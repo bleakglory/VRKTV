@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Art Source\TirgamesAssets\Utility\Shaders\Editor\TirgamesStandardShaderGUI.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioImportPostProcessor.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPPropagationMaterialEditor.cs" />
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPPropagationSerializationManager.cs" />
     <Compile Include="Assets\Oculus\Spatializer\editor\ONSPReflectionCustomGUI.cs" />
-    <Compile Include="Assets\TirgamesAssets\Utility\Shaders\Editor\TirgamesStandardShaderGUI.cs" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/HP/Documents/GitHub/VRKTV/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>

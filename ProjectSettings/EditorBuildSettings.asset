@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KTV.unity
     guid: 360d3fb7bed179e44bf4b1cef31afd1c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/musicVisualization_forPre.unity
     guid: 3942c38a406ea9946a06277a7288a87b
   m_configObjects: {}

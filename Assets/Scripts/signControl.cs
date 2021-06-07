@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class signControl : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class signControl : MonoBehaviour
     public GameObject username_signUp;
     public GameObject password_signUp;
     public GameObject passwordConfirm_signUp;
+    bool isPwdValid=true;
+
+
+    private string passwordRule = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z\d]{8,15}$"; //密码必须有数字与字母混合组成的8-15位数
 
     //-------------Button-------------//
     public GameObject signIn_but;
@@ -57,6 +62,8 @@ public class signControl : MonoBehaviour
         confirm_but.SetActive(false);
         cancel_but.SetActive(false);
         systemNotificationPanel.SetActive(false);
+        
+
 
         isSignIn = false;
     }
@@ -154,6 +161,7 @@ public class signControl : MonoBehaviour
                     systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
                     systemInformation.GetComponent<TMPro.TextMeshProUGUI>().text = "You have Successfully logged in our system! You will move into the Characters Selection Session in "+(int)(3-time)+"s";
                     Debug.Log("成功登录");
+                    PlayerPrefs.SetString("CurrentUser", username);
                     //SceneManager.LoadScene(1);
                     isLogged = true;
 
@@ -172,21 +180,31 @@ public class signControl : MonoBehaviour
             }
             else
             {
-                if (!password.Equals(confirmPassword))
+                if (isPwdValid)
                 {
-                    systemNotificationPanel.SetActive(true);
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
-                    systemInformation.text = "Two passwords are not same! Please check your password...";
+                    if (!password.Equals(confirmPassword))
+                    {
+                        systemNotificationPanel.SetActive(true);
+                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                        systemInformation.text = "Two passwords are not same! Please check your password...";
 
+                    }
+                    else
+                    {
+                        systemNotificationPanel.SetActive(true);
+                        GetComponent<UserController>().Register(username, password);
+                        systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
+                        systemInformation.text = "You have successfully register an account, you can use the account to log in our system...";
+                        SceneManager.LoadScene(0);
+                    }
                 }
                 else
                 {
                     systemNotificationPanel.SetActive(true);
-                    GetComponent<UserController>().Register(username, password);
-                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.green;
-                    systemInformation.text = "You have successfully register an account, you can use the account to log in our system...";
-                    SceneManager.LoadScene(0);
+                    systemInformation.GetComponent<TMPro.TextMeshProUGUI>().color = Color.red;
+                    systemInformation.text = "Your Password must consist of a mixture of digits and letters, and its length mush between 8-15";
                 }
+                
 
             }
 
@@ -214,10 +232,28 @@ public class signControl : MonoBehaviour
         confirmPassword = text;
     }
 
-    public void checkPasswordIsValid(string passward)
+    
+
+
+    public void checkPasswordIsValid(string s)
     {
+        Regex regex = new Regex(passwordRule);
+        if (regex.IsMatch(s))
+        {
+            isPwdValid = true;
+            Debug.Log("该密码符合规则");
+
+        }
+        else
+        {
+            isPwdValid = true;
+            Debug.Log("该密码不符合规则");
+
+        }
 
     }
+
+    
 
 
 }

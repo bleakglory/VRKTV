@@ -24,6 +24,8 @@ public class BackgroundSelect : MonoBehaviour
     public GameObject BGPanel;
     public GameObject systemNotification;
     public TMP_Text systemInformation;
+    public GameObject chooseBGPanel;
+    public GameObject myAccountPanel;
     float time = 0;
 
     // Start is called before the first frame update
@@ -31,6 +33,7 @@ public class BackgroundSelect : MonoBehaviour
     {
         PlayerPrefs.SetInt("Background", 0);
         systemNotification.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -102,5 +105,17 @@ public class BackgroundSelect : MonoBehaviour
     public void clickCancel()
     {
         SceneManager.LoadScene(1);//reload chooseBG scene
+    }
+
+    public void clickMyAccount()
+    {
+        chooseBGPanel.SetActive(false);
+        myAccountPanel.SetActive(true);
+    }
+
+    public void clickBack()
+    {
+        chooseBGPanel.SetActive(true);
+        myAccountPanel.SetActive(false);
     }
 }

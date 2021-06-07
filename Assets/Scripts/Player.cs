@@ -5,23 +5,32 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+
     public GameObject player;
     public GameObject Instrument;
 
+    [Header("Controllers")]
     public Transform leftHand;
     public Transform rightHand;
-
     public Transform handRotation;
+
+    [Header("Canvas")]
     public GameObject MenuCanvas;
     public GameObject ReturnCanvas;
+    public TMP_Text ExitText;
     public GameObject TipCanvas;
     public GameObject LrcCanvas;
+
+    [Header("Move EFX")]
     public ParticleSystem MovePointEFX;
+    public LineRenderer PlayerMoveLineRender;
+    public LineRenderer UILineRender;
+    
+    [Header("Others")]
     public int height;
     public int resPoint;
-    public LineRenderer PlayerMoveLineRender;
+    public GameObject MVPanel;
 
-    public LineRenderer UILineRender;
     public GameObject input;
     public GameManager GM;
 
@@ -29,13 +38,19 @@ public class Player : MonoBehaviour
 
     private bool _openMove;
     private bool _isCatchInstru;
+    private bool _openExit;
+    private bool _openLayout;
     private GameObject _instrument;
     float Rotate;
     private Vector3[] _path;
 
     void Start()
     {
+        _openMove = false;
+        _openExit = false;
+        _openLayout = false;
         _isCatchInstru = false;
+        ExitText.text = null;
     }
 
 
@@ -48,6 +63,17 @@ public class Player : MonoBehaviour
                 _openMove = !_openMove;
             }
 
+            if (_openExit)
+            {
+                ExitFunc();
+            }
+            else
+            {
+                if (OVRInput.GetDown(OVRInput.Button.Two))
+                {
+                    _openExit = true;
+                }
+            }
             if (_openMove)
             {
                 openPlayerMove();
@@ -61,13 +87,21 @@ public class Player : MonoBehaviour
                 MovePointEFX.Simulate(0);
             }
             UILineRender.enabled = false;
+            if (!MVPanel.activeInHierarchy) {
+                MVPanel.SetActive(true);
+            }
             input.SetActive(false);
 
             if (rightHand.GetComponent<Instrument>().HasPlayed && !rightHand.GetComponent<AudioSource>().isPlaying)
             {
-                Instrument.SetActive(false);
-                LrcCanvas.SetActive(true);
-                TipCanvas.SetActive(true);
+                if(Instrument.activeInHierarchy)
+                    Instrument.SetActive(false);
+
+                if(!LrcCanvas.activeInHierarchy)
+                    LrcCanvas.SetActive(true);
+
+                if(!TipCanvas.activeInHierarchy)
+                    TipCanvas.SetActive(true);
                 //GM.isStart = true;
             }
             else
@@ -83,10 +117,27 @@ public class Player : MonoBehaviour
             if (!input.activeInHierarchy)
                 input.SetActive(true);
 
-            LrcCanvas.SetActive(false);
-            TipCanvas.SetActive(false);
+            if (MVPanel.activeInHierarchy)
+            {
+                MVPanel.SetActive(false);
+            }
+
+            if(LrcCanvas.activeInHierarchy)
+            {
+                LrcCanvas.SetActive(false);
+            }
+
+            if (TipCanvas.activeInHierarchy)
+            {
+                TipCanvas.SetActive(false);
+            }
+
         }
 
+        if(_openLayout)
+        {
+            SoundLayOut();
+        }
     }
 
     //LateUpdate: let camera move with canvas
@@ -113,6 +164,40 @@ public class Player : MonoBehaviour
             catchInstrument(_instrument);
         }
 
+    }
+
+    void ExitFunc()
+    {
+        if (!ExitText.text.Equals("Click Button B to Exit Recording..."))
+        {
+            ExitText.text = "Click Button B to Exit Recording...";
+        }
+        if(OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            ExitText.text = "LOADING ......";
+            _openLayout = true;
+            if (!_openLayout)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            }
+        }
+        else if (OVRInput.GetDown(OVRInput.Button.Any))
+        {
+            ExitText.text = null;
+            _openExit = false;
+        }
+    }
+
+    void SoundLayOut()
+    {
+        if(GM.MusicList[PlayerPrefs.GetInt("Music") - 1].volume > 0)
+        {
+            GM.MusicList[PlayerPrefs.GetInt("Music") - 1].volume -= 0.01f;
+        }
+        else
+        {
+            _openLayout = false;
+        }
     }
 
     public static Vector3 GetBezierPoint(float t, Vector3 start, Vector3 center, Vector3 end)

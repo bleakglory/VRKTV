@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
     public Canvas menuCanv;
     public Canvas recordCanv;
     public TMP_Text txt;
-    public AudioSource[] musicList;
+    public VideoPlayer[] VideoList;
+    public AudioSource[] MusicList;
     public GameObject[] backgrounds;
     public AudioSource[] StrongthenSound;
     public Instrument instrument;
@@ -34,11 +36,13 @@ public class GameManager : MonoBehaviour
     private string[] devices;
     private bool _isHaveMicrophone;
     private bool _startSoundBack;
+    private string currentUser = null;
     #endregion
 
     void Start()
     {
-        path = Application.persistentDataPath + "/Users";
+        currentUser = PlayerPrefs.GetString("CurrentUser");
+        path = Application.persistentDataPath + "/Users" + "/" + currentUser + "/Audios";
         au = GetComponent<AudioSource>();
         backgrounds[PlayerPrefs.GetInt("Background")].SetActive(true);
         menuCanv.gameObject.SetActive(true);
@@ -93,7 +97,7 @@ public class GameManager : MonoBehaviour
 
         if(isPlay == true)
         {
-            if(!musicList[PlayerPrefs.GetInt("Music") - 1].isPlaying)
+            if(! VideoList[PlayerPrefs.GetInt("Music") - 1].isPlaying)
             {
                 OnStopClick();
                 GetComponent<MusicVisualization>().thisAudioSource = null;
@@ -125,8 +129,8 @@ public class GameManager : MonoBehaviour
     }
     void musicPlay()
     {
-        musicList[PlayerPrefs.GetInt("Music") - 1].Play();
-        GetComponent<MusicVisualization>().thisAudioSource = musicList[PlayerPrefs.GetInt("Music") - 1];
+        VideoList[PlayerPrefs.GetInt("Music") - 1].Play();
+        GetComponent<MusicVisualization>().thisAudioSource = MusicList[PlayerPrefs.GetInt("Music") - 1];
         GetComponent<Lrc>().enabled = true;
         GetComponent<Lrc>().songPath = _songName[PlayerPrefs.GetInt("Music") - 1];
         isStart = false;
@@ -142,7 +146,7 @@ public class GameManager : MonoBehaviour
     {
         WavFromClip(path + "/test.wav", au.clip); //将录音保存为wav
 
-        string wav = path + "/test.wav";
+        string wav = path + "/"+ _songName[PlayerPrefs.GetInt("Music") - 1] + ".wav";
         using (Process proc = new Process())
         {
             proc.StartInfo.FileName = Application.streamingAssetsPath + @"SimpleDenoise.exe";
@@ -160,13 +164,13 @@ public class GameManager : MonoBehaviour
 
     public void playRecord()
     {
-        musicList[PlayerPrefs.GetInt("Music") - 1].Play();
+        VideoList[PlayerPrefs.GetInt("Music") - 1].Play();
         OnPlayClick();
     }
 
     public void backToMenu()
     {
-        musicList[PlayerPrefs.GetInt("Music") - 1].Stop();
+        VideoList[PlayerPrefs.GetInt("Music") - 1].Stop();
         recordCanv.gameObject.SetActive(false);
         menuCanv.gameObject.SetActive(true);
         instrument.gameObject.SetActive(true);
@@ -177,27 +181,38 @@ public class GameManager : MonoBehaviour
         instrument.MicrophoneModel.SetActive(false);
     }
 
-
+    public void chooseMusicButton(Button bn)
+    {
+        String buttonText = bn.GetComponentInChildren<Text>().text;
+        if (buttonText.Equals("老男孩"))
+        {
+            one();
+        }else if (buttonText.Equals("年少有为")) { two(); }
+        else if (buttonText.Equals("起风了")) { three(); }
+        else if (buttonText.Equals("十年")) { four(); }
+        else if (buttonText.Equals("水星记")) { five(); }
+    }
+    //老男孩
     public void one()
     {
         startMusic(1);
     }
-
+    //年少有为
     public void two()
     {
         startMusic(2);
     }
-
+    //起风了
     public void three()
     {
         startMusic(3);
     }
-
+    //十年
     public void four()
     {
         startMusic(4);
     }
-
+    //水星记
     public void five()
     {
         startMusic(5);
