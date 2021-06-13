@@ -16,7 +16,7 @@ public class signControl : MonoBehaviour
     public GameObject username_signUp;
     public GameObject password_signUp;
     public GameObject passwordConfirm_signUp;
-    bool isPwdValid=true;
+    private bool isPwdValid=false;
 
 
     private string passwordRule = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z\d]{8,15}$"; //密码必须有数字与字母混合组成的8-15位数
@@ -28,7 +28,7 @@ public class signControl : MonoBehaviour
     public GameObject cancel_but;
 
 
-    bool isSignIn = false;
+    bool isSignIn;
     string username;
     string password;
     string confirmPassword;
@@ -246,7 +246,7 @@ public class signControl : MonoBehaviour
         }
         else
         {
-            isPwdValid = true;
+            isPwdValid = false;
             Debug.Log("该密码不符合规则");
 
         }

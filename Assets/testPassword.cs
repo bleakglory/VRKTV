@@ -9,7 +9,7 @@ public class testPassword : MonoBehaviour
 {
     public Toggle showIcon;
     public TMP_InputField input;
-    private bool isShow = true;
+    private bool isValid = false;
 
 
     private string passwordRule = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z\d]{8,15}$"; //密码必须有数字与字母混合组成的8-15位数
@@ -33,12 +33,15 @@ public class testPassword : MonoBehaviour
         if (regex.IsMatch(s))
         {
             Debug.Log("该密码符合规则");
-            
+
+            isValid = true;
+            print(isValid);
         }
         else
         {
             Debug.Log("该密码不符合规则");
-            
+            isValid = false;
+            print(isValid);
         }
         
     }
