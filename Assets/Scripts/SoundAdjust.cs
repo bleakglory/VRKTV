@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundAdjust : MonoBehaviour
-{
+{    
     public AudioSource[] MusicList;
     public AudioSource PlayerRecord;
 

@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public Instrument instrument;
     private int Frequency = 48000; //录音频率
     private int BitRate = 16; //比特率
-    private int MicSecond = 300;  
+    private int MicSecond = 400;  
     public bool isStart;
 
     private bool isPlay;
@@ -144,9 +144,9 @@ public class GameManager : MonoBehaviour
     }
     public void save()
     {
-        WavFromClip(path + "/test.wav", au.clip); //将录音保存为wav
+        string wav = path + "/" + _songName[PlayerPrefs.GetInt("Music") - 1] + ".wav";
+        WavFromClip(wav, au.clip); //将录音保存为wav
 
-        string wav = path + "/"+ _songName[PlayerPrefs.GetInt("Music") - 1] + ".wav";
         using (Process proc = new Process())
         {
             proc.StartInfo.FileName = Application.streamingAssetsPath + @"SimpleDenoise.exe";

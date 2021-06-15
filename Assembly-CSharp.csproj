@@ -231,6 +231,7 @@
     <Compile Include="Assets\Scripts\signControl.cs" />
     <Compile Include="Assets\Scripts\SoundAdjust.cs" />
     <Compile Include="Assets\Scripts\UserController.cs" />
+    <Compile Include="Assets\Scripts\UserRecord.cs" />
     <Compile Include="Assets\showPwd.cs" />
     <Compile Include="Assets\testPassword.cs" />
     <Compile Include="Assets\testTexture.cs" />

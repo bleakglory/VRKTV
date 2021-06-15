@@ -568,6 +568,7 @@ MonoBehaviour:
   cancel_but: {fileID: 322832666}
   systemInformation: {fileID: 1191155774}
   systemNotificationPanel: {fileID: 997195066}
+  systemPanel: {fileID: 0}
   cameraTransform: {fileID: 786181259}
   points: []
   moveSpeed: 1
